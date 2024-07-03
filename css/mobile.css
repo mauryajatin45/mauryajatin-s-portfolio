@@ -1,0 +1,80 @@
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .home {
+      padding: 10px;
+      height: auto; /* Adjust height to auto for better flexibility */
+      display: block; /* Change to block for single column layout */
+    }
+  
+    .maincontainer {
+      padding: 10px;
+      line-height: normal; /* Adjust line height for better readability */
+    }
+  
+    .maincontainer .hometxt h1,
+    .maincontainer .hometxt h2 {
+      font-size: 2rem; /* Decrease font size for mobile */
+      line-height: 1.2; /* Adjust line height */
+    }
+  
+    .nav {
+      font-size: 100%; /* Adjust font size for navigation */
+      top: 0;
+      width: 100%; /* Make navigation bar full width */
+    }
+  
+    .li {
+      padding: 10px 12px; /* Adjust padding for navigation items */
+    }
+  
+    .Skills .skillimg {
+      height: 70px; /* Decrease skill image size */
+      padding: 10px; /* Adjust padding */
+    }
+  
+    .profilepicture {
+      margin-left: 0; /* Remove left margin */
+      padding: 10px; /* Add padding */
+    }
+  
+    .profilepicture img {
+      width: 80%; /* Adjust profile picture size */
+      padding: 10px; /* Adjust padding */
+    }
+  
+    .container2 {
+      height: auto; /* Adjust height to auto for better flexibility */
+    }
+  
+    .work, .projects, .aboutme {
+      width: 90%; /* Decrease width for better fit */
+      padding: 10px; /* Adjust padding */
+    }
+  
+    .allcards, .allwork, .education {
+      flex-direction: column; /* Stack items vertically */
+      gap: 10px; /* Adjust gap */
+    }
+  
+    .card {
+      width: 90%; /* Adjust card width */
+      height: auto; /* Adjust card height */
+    }
+  
+    .soccard {
+      width: 90%; /* Adjust social card width */
+      height: auto; /* Adjust social card height */
+    }
+  
+    .button {
+      --width: 100px; /* Decrease button width */
+      --height: 30px; /* Decrease button height */
+      font-size: 0.8rem; /* Decrease font size */
+    }
+  
+    .DownloadCV {
+      bottom: 10px; /* Adjust position */
+      right: 10px; /* Adjust position */
+    }
+  }
+  
