@@ -10,9 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="app.js">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="scrollbar.css" />
+    <link rel="stylesheet" href="./js/scrollbar.js">
+    <link rel="stylesheet" href="./js/app.js" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/scrollbar.css" />
   </head>
 
   <body>
@@ -27,11 +28,12 @@
         </ul>
       </div>
       <div class="DownloadCV">
-        <div class="button" data-tooltip="Size: 42KB">
-          <div class="button-wrapper">
-            <div class="text">Download CV</div>
-            <span class="icon">
-              <svg
+        <a href="./Jatin Maurya(simple).pdf" download="My_Resume.pdf">
+          <div class="button" data-tooltip="Size: 58KB">
+            <div class="button-wrapper">
+              <div class="text">Download CV</div>
+              <span class="icon">
+                <svg
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
                 role="img"
@@ -39,18 +41,19 @@
                 height="2em"
                 preserveAspectRatio="xMidYMid meet"
                 viewBox="0 0 24 24"
-              >
+                >
                 <path
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
                 ></path>
               </svg>
             </span>
           </div>
+        </a>
         </div>
       </div>
       <div class="maincontainer">
@@ -62,74 +65,80 @@
           <div class="main">
             <div class="up">
               <a href="https://linkedin.com/in/mauryajatin" target="_blank">
-
-
-              <button class="card1">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  width="30"
-                  height="30"
-                  viewBox="-10 -10 52 52"
-                >
-                  <image
-                    id="_4202085_linkedin_logo_social_social_media_icon"
-                    data-name="4202085_linkedin_logo_social_social media_icon"
-                    width="42"
-                    height="42"
-                    xlink:href="data:image/png;base64,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"
-                  />
-                </svg>
-              </button>
-            </a>
-              <button class="card2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 48 48"
-                  width="30px"
-                  height="30px"
-                  class="twitter"
-                >
-                  <path
-                    d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"
-                  ></path>
-                </svg>
-              </button>
+                <button class="card1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="30"
+                    height="30"
+                    viewBox="-10 -10 52 52"
+                  >
+                    <image
+                      id="_4202085_linkedin_logo_social_social_media_icon"
+                      data-name="4202085_linkedin_logo_social_social media_icon"
+                      width="42"
+                      height="42"
+                      xlink:href="data:image/png;base64,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"
+                    />
+                  </svg>
+                </button>
+              </a>
+              <a href="https://x.com/mauryajatin45" target="_blank">
+                <button class="card2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 48 48"
+                    width="30px"
+                    height="30px"
+                    class="twitter"
+                  >
+                    <path
+                      d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"
+                    ></path>
+                  </svg>
+                </button>
+              </a>
             </div>
             <div class="down">
-              <button class="card3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 30 30"
-                  width="30px"
-                  height="30px"
-                  class="github"
-                >
-                  <path
-                    d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"
-                  ></path>
-                </svg>
-              </button>
-              <button class="card4">
-                <svg
-                  height="30px"
-                  width="30px"
-                  viewBox="0 0 48 48"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="discord"
-                >
-                  <path
-                    d="M40,12c0,0-4.585-3.588-10-4l-0.488,0.976C34.408,10.174,36.654,11.891,39,14c-4.045-2.065-8.039-4-15-4s-10.955,1.935-15,4c2.346-2.109,5.018-4.015,9.488-5.024L18,8c-5.681,0.537-10,4-10,4s-5.121,7.425-6,22c5.162,5.953,13,6,13,6l1.639-2.185C13.857,36.848,10.715,35.121,8,32c3.238,2.45,8.125,5,16,5s12.762-2.55,16-5c-2.715,3.121-5.857,4.848-8.639,5.815L33,40c0,0,7.838-0.047,13-6C45.121,19.425,40,12,40,12z M17.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C21,28.209,19.433,30,17.5,30z M30.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C34,28.209,32.433,30,30.5,30z"
-                  ></path>
-                </svg>
-              </button>
+              <a href="https://github.com/mauryajatin45" target="_blank">
+                <button class="card3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 30 30"
+                    width="30px"
+                    height="30px"
+                    class="github"
+                  >
+                    <path
+                      d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"
+                    ></path>
+                  </svg>
+                </button>
+              </a>
+              <a href="https://discordapp.com/users/870596714715828294" target="_blank">
+                <button class="card4">
+                  <svg
+                    height="30px"
+                    width="30px"
+                    viewBox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="discord"
+                  >
+                    <path
+                      d="M40,12c0,0-4.585-3.588-10-4l-0.488,0.976C34.408,10.174,36.654,11.891,39,14c-4.045-2.065-8.039-4-15-4s-10.955,1.935-15,4c2.346-2.109,5.018-4.015,9.488-5.024L18,8c-5.681,0.537-10,4-10,4s-5.121,7.425-6,22c5.162,5.953,13,6,13,6l1.639-2.185C13.857,36.848,10.715,35.121,8,32c3.238,2.45,8.125,5,16,5s12.762-2.55,16-5c-2.715,3.121-5.857,4.848-8.639,5.815L33,40c0,0,7.838-0.047,13-6C45.121,19.425,40,12,40,12z M17.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C21,28.209,19.433,30,17.5,30z M30.5,30c-1.933,0-3.5-1.791-3.5-4c0-2.209,1.567-4,3.5-4s3.5,1.791,3.5,4C34,28.209,32.433,30,30.5,30z"
+                    ></path>
+                  </svg>
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
       <div class="profilepicture">
         <img src="./images/Jatin_Maurya.png" alt="Profile Picture" />
-        <h1 style="color: #e1ebed; margin-top: 4%; font-size: 300%;">Jatin Maurya</h1>
+        <h1 style="color: #e1ebed; margin-top: 4%; font-size: 300%">
+          Jatin Maurya
+        </h1>
       </div>
     </div>
     <div class="Skills">
@@ -188,7 +197,11 @@
         <h1 class="navtxtprop">Projects</h1>
         <div class="allcards">
           <div class="card">
-            <img src="./images/Projects/Portfolio.png" alt="img" width="400px" />
+            <img
+              src="./images/Projects/Portfolio.png"
+              alt="img"
+              width="400px"
+            />
             <div class="card__content">
               <p class="card__title">Personal Portfolio</p>
               <p class="card__description">
@@ -208,7 +221,10 @@
             <div class="card__content">
               <p class="card__title">Tic Tac Toe</p>
               <p class="card__description">
-                I developed a Tic Tac Toe game using HTML, CSS, and JavaScript. This project demonstrates my ability to create interactive web applications with a clean, intuitive user interface and robust game logic.
+                I developed a Tic Tac Toe game using HTML, CSS, and JavaScript.
+                This project demonstrates my ability to create interactive web
+                applications with a clean, intuitive user interface and robust
+                game logic.
               </p>
             </div>
           </div>
@@ -335,15 +351,27 @@
             <h4 class="education__subtitle">Silver Oak University</h4>
             <h4 class="education__date">2023 - 2026</h4>
             <p class="education__description">
-              I pursued a Bachelor's degree in Computer Science from the University of XYZ. During my studies, I gained a solid foundation in programming languages, algorithms, data structures, and software development principles. I also had the opportunity to work on various projects, including a web-based e-commerce application and a mobile app for managing personal finances.
+              I pursued a Bachelor's degree in Computer Science from the
+              University of XYZ. During my studies, I gained a solid foundation
+              in programming languages, algorithms, data structures, and
+              software development principles. I also had the opportunity to
+              work on various projects, including a web-based e-commerce
+              application and a mobile app for managing personal finances.
             </p>
           </div>
           <div class="education__item">
             <h2 class="education__title">Class ⅠⅩ to ⅩⅠⅠ</h2>
-            <h4 class="education__subtitle">The New Little Flower Higher Secondary School</h4>
+            <h4 class="education__subtitle">
+              The New Little Flower Higher Secondary School
+            </h4>
             <h4 class="education__date">2019 - 2023</h4>
             <p class="education__description">
-              I completed my secondary and higher secondary education from The New Little Flower Higher Secondary School. During this time, I developed a keen interest in computer science and technology, which motivated me to pursue a career in the field. I actively participated in coding competitions, science fairs, and extracurricular activities to enhance my skills and knowledge.
+              I completed my secondary and higher secondary education from The
+              New Little Flower Higher Secondary School. During this time, I
+              developed a keen interest in computer science and technology,
+              which motivated me to pursue a career in the field. I actively
+              participated in coding competitions, science fairs, and
+              extracurricular activities to enhance my skills and knowledge.
             </p>
           </div>
           <div class="education__item">
@@ -351,14 +379,23 @@
             <h4 class="education__subtitle">Little Flower School</h4>
             <h4 class="education__date">2019 - 2023</h4>
             <p class="education__description">
-              I completed my primary education from Little Flower School, where I developed a strong academic foundation and a passion for learning. I actively participated in various school events, sports competitions, and cultural activities, which helped me develop essential skills such as teamwork, leadership, and communication.
+              I completed my primary education from Little Flower School, where
+              I developed a strong academic foundation and a passion for
+              learning. I actively participated in various school events, sports
+              competitions, and cultural activities, which helped me develop
+              essential skills such as teamwork, leadership, and communication.
             </p>
           </div>
         </div>
       </div>
     </div>
     <div class="container3">
-
+      <h1 class="h1container3">Contact ME</h1>
+      <div class="soccard">
+        <img src="./images/112-gmail_email_mail-512.png" alt="Gmail">
+          <h2>Click ME</h2>
+        
+      </div>
     </div>
   </body>
 </html>
