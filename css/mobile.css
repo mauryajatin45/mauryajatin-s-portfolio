@@ -13,6 +13,10 @@
   margin-top: 10%;
 }
 
+#twitter, #linkedin, #Instagram {
+  width: 50px;
+}
+
   .work1,
   .work2,
   .education__item {
