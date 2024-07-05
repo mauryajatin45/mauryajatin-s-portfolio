@@ -1,4 +1,18 @@
 @media (max-width: 768px) {
+
+.form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 10%;
+}
+
   .work1,
   .work2,
   .education__item {
