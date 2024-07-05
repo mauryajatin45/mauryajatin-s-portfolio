@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 let scrollTopBtn = document.getElementById("scrollTopBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {
+window.onscroll = function () {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     scrollTopBtn.style.display = "block";
   } else {
@@ -70,18 +70,18 @@ window.onscroll = function() {
 };
 
 // When the user clicks on the button, scroll to the top of the document
-scrollTopBtn.addEventListener('click', function() {
+scrollTopBtn.addEventListener('click', function () {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 function validateForm() {
   let isValid = true;
-  
+
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const phone = document.getElementById('phone').value;
   const message = document.getElementById('message').value;
-  
+
   const nameError = document.getElementById('nameError');
   const emailError = document.getElementById('emailError');
   const phoneError = document.getElementById('phoneError');
@@ -93,25 +93,25 @@ function validateForm() {
   messageError.textContent = '';
 
   if (name.trim() === '') {
-      nameError.textContent = 'Name is required.';
-      isValid = false;
+    nameError.textContent = 'Name is required.';
+    isValid = false;
   }
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) {
-      emailError.textContent = 'Invalid email address.';
-      isValid = false;
+    emailError.textContent = 'Invalid email address.';
+    isValid = false;
   }
 
   const phonePattern = /^[0-9]{10}$/;
   if (!phonePattern.test(phone)) {
-      phoneError.textContent = 'Phone number must be 10 digits.';
-      isValid = false;
+    phoneError.textContent = 'Phone number must be 10 digits.';
+    isValid = false;
   }
 
   if (message.trim() === '') {
-      messageError.textContent = 'Message is required.';
-      isValid = false;
+    messageError.textContent = 'Message is required.';
+    isValid = false;
   }
 
   return isValid;
