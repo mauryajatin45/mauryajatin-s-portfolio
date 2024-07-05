@@ -24,28 +24,36 @@ document.addEventListener('DOMContentLoaded', () => {
   function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
+      console.log(`Scrolling to section: ${sectionId}`);
       section.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.log(`Section not found: ${sectionId}`);
     }
   }
 
   // Adding event listeners to navigation items
   document.getElementById('nav-home').addEventListener('click', function () {
+    console.log('Home clicked');
     scrollToSection('home');
   });
 
   document.getElementById('nav-about').addEventListener('click', function () {
+    console.log('About clicked');
     scrollToSection('aboutme');
   });
 
   document.getElementById('nav-projects').addEventListener('click', function () {
+    console.log('Projects clicked');
     scrollToSection('projects');
   });
 
   document.getElementById('nav-experiences').addEventListener('click', function () {
+    console.log('Experiences clicked');
     scrollToSection('experiences');
   });
 
   document.getElementById('nav-education').addEventListener('click', function () {
+    console.log('Education clicked');
     scrollToSection('education');
   });
 });
