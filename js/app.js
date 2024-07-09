@@ -52,6 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollToSection('experiences');
   });
 
+  document.getElementById('nav-hire').addEventListener('click', function () {
+    console.log('Experiences clicked');
+    scrollToSection('hire');
+  });
+
+
+
   document.getElementById('nav-education').addEventListener('click', function () {
     console.log('Education clicked');
     scrollToSection('education');
