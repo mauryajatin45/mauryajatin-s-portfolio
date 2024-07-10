@@ -5,6 +5,16 @@ function toggleNav() {
   hamburger.classList.toggle('active');
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  var navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+          toggleNav();
+      });
+  });
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
   let isScrolling;
 
