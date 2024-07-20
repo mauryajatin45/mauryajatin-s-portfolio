@@ -14,7 +14,7 @@ html {
   background-color: #331c52;
   padding: 20px;
   width: 100%;
-  height: 87vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
@@ -142,10 +142,30 @@ style.css .ul {
   background-color: #291c3a;
   width: 100%;
   padding: 10px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+}
+
+.Skills h1{
+  color: white;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.commonskill {
+  gap: 10px;
+  margin-top: 25px;
+  margin-left: 5%;
+  width: fit-content;
+  border-radius: 10px;
+  height: auto;
+  backdrop-filter: blur(40px);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  background-color: rgba(255, 255, 255, 0.344);
+}
+.commonskill h2 {
+  margin-top: 2%;
+  color: white;
+  text-align: center;
+  
 }
 .skillimg:hover {
   transform: scale(1.5);
@@ -157,7 +177,17 @@ style.css .ul {
   height: 100px;
   padding: 20px;
 }
+.Skills1{
+  margin: auto;
+}
+.downwardskills{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
 
+}
 .profilepicture {
   margin-left: 20%;
   display: flex;
