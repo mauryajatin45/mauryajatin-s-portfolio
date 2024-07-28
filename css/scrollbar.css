@@ -1,6 +1,6 @@
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 6px;
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -9,18 +9,18 @@
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
-  background: yellow;
+  background: #e1ebed;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #a200ff;
+  background: #000000;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #580389;
+  background: #00000095;
 }
 
 /* Hover area to show scrollbar */

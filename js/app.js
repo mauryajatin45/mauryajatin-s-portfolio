@@ -133,3 +133,82 @@ function validateForm() {
 
   return isValid;
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector("form");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const phoneInput = document.getElementById("phone");
+  const messageInput = document.getElementById("message");
+  
+  const inputs = [nameInput, emailInput, phoneInput, messageInput];
+  
+  form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const phone = phoneInput.value.trim();
+      const message = messageInput.value.trim();
+      
+      if (name === "" || email === "" || phone === "" || message === "") {
+          alert("All fields are required.");
+          return;
+      }
+      
+      if (!validateEmail(email)) {
+          alert("Invalid email format.");
+          return;
+      }
+      
+      if (!validatePhone(phone)) {
+          alert("Invalid phone number.");
+          return;
+      }
+      
+      // Submit the form via AJAX or perform further actions
+      alert("Form submitted successfully!");
+      form.submit();  // Uncomment this line if you want to submit the form traditionally
+  });
+  
+  function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(email).toLowerCase());
+  }
+  
+  function validatePhone(phone) {
+      const re = /^[0-9]{10}$/;
+      return re.test(String(phone));
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const countryCodeSelect = document.getElementById('countryCode');
+
+  fetch('https://restcountries.com/v3.1/all')
+      .then(response => response.json())
+      .then(data => {
+          const sortedData = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+          sortedData.forEach(country => {
+              const option = document.createElement('option');
+              option.value = `${country.idd.root}${country.idd.suffixes ? country.idd.suffixes[0] : ''}`;
+              option.textContent = `${country.flag} ${country.name.common} ${option.value}`;
+              countryCodeSelect.appendChild(option);
+          });
+      })
+      .catch(error => console.error('Error fetching country codes:', error));
+
+  // Add keydown event listener to filter options
+  countryCodeSelect.addEventListener('keydown', (event) => {
+      const char = String.fromCharCode(event.keyCode).toLowerCase();
+      const options = Array.from(countryCodeSelect.options);
+      
+      for (let i = 0; i < options.length; i++) {
+          if (options[i].textContent.toLowerCase().startsWith(char)) {
+              countryCodeSelect.selectedIndex = i;
+              break;
+          }
+      }
+  });
+});

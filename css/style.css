@@ -74,16 +74,19 @@ style.css .ul {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
 }
 
 @keyframes blink-caret {
+
   from,
   to {
     border-right-color: transparent;
   }
+
   50% {
     border-right-color: white;
   }
@@ -144,7 +147,7 @@ style.css .ul {
   padding: 10px 0;
 }
 
-.Skills h1{
+.Skills h1 {
   color: white;
   text-align: center;
   margin-bottom: 2%;
@@ -153,13 +156,15 @@ style.css .ul {
   /* text-shadow: #00ffff 0px 0px 10px; */
   filter: drop-shadow(0 0 0.65rem #ffffff);
 }
-.skillsectionimage{
+
+.skillsectionimage {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 .commonskill {
   gap: 10px;
   margin-top: 25px;
@@ -171,32 +176,36 @@ style.css .ul {
   border: 2px solid rgba(255, 255, 255, 0.18);
   background-color: rgba(255, 255, 255, 0.344);
 }
+
 .commonskill h2 {
   margin-top: 2%;
   color: white;
   text-align: center;
-  
 }
+
 .skillimg:hover {
   transform: scale(1.5);
   transition: 0.2s;
   transition-timing-function: ease-in-out;
 }
+
 .Skills .skillimg {
   box-sizing: border-box;
   height: 100px;
   padding: 20px;
 }
-.Skills1{
+
+.Skills1 {
   margin: auto;
 }
-.downwardskills{
+
+.downwardskills {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
 }
+
 .profilepicture {
   margin-left: 20%;
   display: flex;
@@ -204,12 +213,14 @@ style.css .ul {
   align-items: center;
   flex-direction: column;
 }
+
 .profilepicture img {
   background-color: #000000;
   border-radius: 40%;
   padding: 20px 40px;
   filter: drop-shadow(0 0 0.65rem #ffffff);
 }
+
 .container2 {
   background-color: #e1ebed;
   box-sizing: border-box;
@@ -353,14 +364,18 @@ style.css .ul {
   justify-content: center;
   align-items: center;
   text-align: justify;
-  padding: 20px; /* Add padding to create empty space around the text */
-  margin: 0 auto; /* Center the container horizontally */
-  width: 60%; /* Adjust the width as needed */
+  padding: 20px;
+  /* Add padding to create empty space around the text */
+  margin: 0 auto;
+  /* Center the container horizontally */
+  width: 60%;
+  /* Adjust the width as needed */
   box-sizing: border-box;
   flex-wrap: wrap;
   font-size: larger;
   line-height: 210%;
 }
+
 .aboutme p {
   margin-top: 2%;
   color: #8121d0;
@@ -437,12 +452,14 @@ style.css .ul {
   width: 100%;
   height: 175px;
 }
+
 .projectimg {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
+
 .card__span {
   cursor: pointer;
   font-size: 11px;
@@ -692,6 +709,7 @@ style.css .ul {
   box-sizing: border-box;
   font-size: larger;
 }
+
 .allwork,
 .education {
   display: flex;
@@ -701,6 +719,7 @@ style.css .ul {
   gap: 20px;
   margin-top: 25px;
 }
+
 .work1,
 .work2,
 .education__item {
@@ -712,6 +731,7 @@ style.css .ul {
   background: #e0e0e0;
   box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
 }
+
 .workh2,
 .education__title {
   color: #291c3a;
@@ -729,11 +749,13 @@ style.css .ul {
   margin-top: 0.5%;
   text-align: left;
 }
+
 .workh2 img {
   width: auto;
   height: 50px;
   float: right;
 }
+
 .workp,
 .education__description {
   color: #291c3a;
@@ -742,6 +764,7 @@ style.css .ul {
   margin-right: 4%;
   text-align: justify;
 }
+
 .work2 .workh2 img {
   width: auto;
   height: 50px;
@@ -750,11 +773,13 @@ style.css .ul {
 }
 
 .container3 {
-  background-color: #331c52;
   box-sizing: border-box;
   width: 100%;
-  height: auto;
+  height: 100vh;
   padding: 2%;
+  border: 1px solid #000;
+  background: #291c3a;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .hamburger {
@@ -810,6 +835,7 @@ style.css .ul {
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -817,13 +843,16 @@ style.css .ul {
   100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-10px);
   }
+
   60% {
     transform: translateY(-5px);
   }
 }
+
 .connectwithus {
   display: flex;
   justify-content: center;
@@ -832,6 +861,7 @@ style.css .ul {
   color: aliceblue;
   line-height: 1.5cm;
 }
+
 .connectwithus .card {
   background-color: #fff;
   border-radius: 10px;
@@ -870,17 +900,15 @@ style.css .ul {
 }
 
 .explore-btn:hover {
-  background: linear-gradient(
-    45deg,
-    #ff005d,
-    #ff8a00,
-    #fff700,
-    #00ff00,
-    #00ffff,
-    #0000ff,
-    #8a00ff,
-    #ff00ff
-  );
+  background: linear-gradient(45deg,
+      #ff005d,
+      #ff8a00,
+      #fff700,
+      #00ff00,
+      #00ffff,
+      #0000ff,
+      #8a00ff,
+      #ff00ff);
   background-size: 800% 800%;
   animation: gradient 3s ease infinite, glow 1.5s ease infinite;
 }
@@ -889,15 +917,18 @@ style.css .ul {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
 @keyframes glow {
+
   0%,
   100% {
     box-shadow: 0 0 2px rgba(255, 0, 93, 0.8), 0 0 4px rgba(255, 138, 0, 0.8),
@@ -905,6 +936,7 @@ style.css .ul {
       0 0 10px rgba(0, 255, 255, 0.8), 0 0 12px rgba(0, 0, 255, 0.8),
       0 0 14px rgba(138, 0, 255, 0.8), 0 0 16px rgba(255, 0, 255, 0.8);
   }
+
   50% {
     box-shadow: 0 0 4px rgba(255, 0, 93, 1), 0 0 8px rgba(255, 138, 0, 1),
       0 0 12px rgba(255, 247, 0, 1), 0 0 16px rgba(0, 255, 0, 1),
@@ -919,103 +951,152 @@ style.css .ul {
   }
 }
 
-.form {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  justify-content: center;
-  margin-top: 3%;
-}
-
-.form h2 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 20px;
-  font-weight: 800;
-  font-size: 2rem;
-}
-
-.form .form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: #333;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.form button {
-  width: 100%;
-  padding: 10px;
-  background: #007bff;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.form button:hover {
-  background: #0056b3;
-}
-
 .error {
   color: red;
   font-size: 0.875rem;
 }
-.connectwithus {
+
+.container3 {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding-left: 11%;
+  padding-right: 11%;
+}
+
+.contact-info,
+.contact-form {
+  padding: 20px;
+  border-radius: 10px;
+  width: 48%;
+  color: #fff;
+  margin-top: 6%;
+}
+
+.contact-info h1 {
+  margin: 0;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.title {
+  font-size: 18px;
+  margin: 1% 0 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 6%;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+}
+
+.contact-details {
+  margin-top: 8%;
+}
+
+.contact-details p {
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.contact-details p i {
+  margin-right: 10px;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 2%;
+}
+
+.contact-form input,
+select {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  height: 22vh;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.contact-details i {
+  color: #007bff;
+}
+
+.line {
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus,
+.contact-form option:focus,
+.contact-form submit:focus {
+  background-color: #ffffff;
+  outline: none;
+  box-shadow: 0 0 15px rgba(122, 120, 255, 0.626);
+}
+
+.phone-input {
+  display: flex;
   align-items: center;
-  flex-direction: row;
-  color: aliceblue;
-  line-height: 1.5cm;
+  gap: 10px;
+
 }
 
-.socialbox {
-  margin: 1%;
+.country-code {
+  padding: 10px;
+  font-size: 16px;
+  width: 36%;
 }
 
-.socialtxt {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-top: 4%;
-  text-decoration: underline;
-  color: white;
-  text-align: center;
-  margin-bottom: 1%;
-}
-
-#twitter,
-#linkedin,
-#Instagram {
-  width: 80px;
-}
-
-.social-icon {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.social-icon:hover {
-  transform: scale(1.3);
-  opacity: 0.8;
+.phone-number {
+  padding: 10px;
+  font-size: 16px;
+  flex: 1;
 }

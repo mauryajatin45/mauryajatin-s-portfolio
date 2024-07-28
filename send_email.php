@@ -39,3 +39,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+<!-- FreeSpaces is used for form sending -->
+ <!-- Hunter.io is used for email verification -->
