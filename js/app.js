@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollToSection('home');
   });
 
-  document.getElementById('nav-about').addEventListener('click', function () {
+  document.getElementById('nav-aboutme').addEventListener('click', function () {
     console.log('About clicked');
     scrollToSection('aboutme');
   });
