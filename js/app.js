@@ -135,53 +135,53 @@ function validateForm() {
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  const form = document.querySelector("form");
-  const nameInput = document.getElementById("name");
-  const emailInput = document.getElementById("email");
-  const phoneInput = document.getElementById("phone");
-  const messageInput = document.getElementById("message");
+// document.addEventListener("DOMContentLoaded", function() {
+//   const form = document.querySelector("form");
+//   const nameInput = document.getElementById("name");
+//   const emailInput = document.getElementById("email");
+//   const phoneInput = document.getElementById("phone");
+//   const messageInput = document.getElementById("message");
   
-  const inputs = [nameInput, emailInput, phoneInput, messageInput];
+//   const inputs = [nameInput, emailInput, phoneInput, messageInput];
   
-  form.addEventListener("submit", function(event) {
-      event.preventDefault();
+//   form.addEventListener("submit", function(event) {
+//       event.preventDefault();
       
-      const name = nameInput.value.trim();
-      const email = emailInput.value.trim();
-      const phone = phoneInput.value.trim();
-      const message = messageInput.value.trim();
+//       const name = nameInput.value.trim();
+//       const email = emailInput.value.trim();
+//       const phone = phoneInput.value.trim();
+//       const message = messageInput.value.trim();
       
-      if (name === "" || email === "" || phone === "" || message === "") {
-          alert("All fields are required.");
-          return;
-      }
+//       if (name === "" || email === "" || phone === "" || message === "") {
+//           alert("All fields are required.");
+//           return;
+//       }
       
-      if (!validateEmail(email)) {
-          alert("Invalid email format.");
-          return;
-      }
+//       if (!validateEmail(email)) {
+//           alert("Invalid email format.");
+//           return;
+//       }
       
-      if (!validatePhone(phone)) {
-          alert("Invalid phone number.");
-          return;
-      }
+//       if (!validatePhone(phone)) {
+//           alert("Invalid phone number.");
+//           return;
+//       }
       
-      // Submit the form via AJAX or perform further actions
-      alert("Form submitted successfully!");
-      form.submit();  // Uncomment this line if you want to submit the form traditionally
-  });
+//       // Submit the form via AJAX or perform further actions
+//       alert("Form submitted successfully!");
+//       form.submit();  // Uncomment this line if you want to submit the form traditionally
+//   });
   
-  function validateEmail(email) {
-      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return re.test(String(email).toLowerCase());
-  }
+//   function validateEmail(email) {
+//       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//       return re.test(String(email).toLowerCase());
+//   }
   
-  function validatePhone(phone) {
-      const re = /^[0-9]{10}$/;
-      return re.test(String(phone));
-  }
-});
+//   function validatePhone(phone) {
+//       const re = /^[0-9]{10}$/;
+//       return re.test(String(phone));
+//   }
+// });
 
 document.addEventListener('DOMContentLoaded', () => {
   const countryCodeSelect = document.getElementById('countryCode');

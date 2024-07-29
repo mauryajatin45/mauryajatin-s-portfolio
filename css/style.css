@@ -969,7 +969,7 @@ style.css .ul {
   border-radius: 10px;
   width: 48%;
   color: #fff;
-  margin-top: 6%;
+  margin-top: 7%;
 }
 
 .contact-info h1 {
@@ -1052,8 +1052,10 @@ select {
   border-radius: 5px;
   background-color: #007bff;
   color: #fff;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
+  font-style:normal;
+  font-weight: 600;
 }
 
 .contact-form button:hover {
@@ -1076,7 +1078,7 @@ select {
 .contact-form textarea:focus,
 .contact-form select:focus,
 .contact-form option:focus,
-.contact-form submit:focus {
+.contact-form .submit:focus {
   background-color: #ffffff;
   outline: none;
   box-shadow: 0 0 15px rgba(122, 120, 255, 0.626);
@@ -1090,9 +1092,10 @@ select {
 }
 
 .country-code {
-  padding: 10px;
+  padding: 7.5px;
   font-size: 16px;
-  width: 36%;
+  width: 32%;
+  margin-right: 1%;
 }
 
 .phone-number {
