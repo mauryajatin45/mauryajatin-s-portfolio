@@ -26,107 +26,110 @@
     padding: 10px;
     padding-bottom: 7%;
   }
+
   .maincontainer {
     margin-top: 0%;
     padding: 10px;
     line-height: normal;
   }
+
   .aboutme {
     font-size: large;
     line-height: 200%;
     letter-spacing: 1px;
     text-align: justify;
     width: 90%;
-  } 
+  }
+
   .maincontainer .hometxt h1,
   .maincontainer .hometxt h2 {
     font-size: 2rem;
     line-height: 1.2;
   }
 
-  @media (max-width: 768px) {
-    .hamburger {
-      display: block;
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 28, 82, 0.95);
+    z-index: 9;
+    padding-top: 60px;
+  }
+
+  .nav .ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav .ul .li {
+    padding: 20px;
+    font-size: 1.5rem;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    text-align: center;
+  }
+
+  .maincontainer .hometxt {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .maincontainer .profilepicture {
+    margin-top: 20px;
+  }
+
+  .maincontainer .profilepicture img {
+    width: 60%;
+    border-radius: 50%;
+  }
+
+  .maincontainer .profilepicture h2 {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+  .maincontainer .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .maincontainer .icons .card {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
     }
 
-    .nav {
-      display: none;
-    }
-
-    .nav.active {
-      display: block;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(51, 28, 82, 0.95);
-      z-index: 9;
-      padding-top: 60px;
-    }
-
-    .nav .ul {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .nav .ul .li {
-      padding: 20px;
-      font-size: 1.5rem;
-    }
-
-    .home {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: auto;
-      text-align: center;
-    }
-
-    .maincontainer .hometxt {
-      text-align: center;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    .maincontainer .profilepicture {
-      margin-top: 20px;
-    }
-
-    .maincontainer .profilepicture img {
-      width: 60%;
-      border-radius: 50%;
-    }
-
-    .maincontainer .profilepicture h2 {
-      color: white;
-      font-size: 1.5rem;
-      margin-top: 10px;
-    }
-
-    .maincontainer .icons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .maincontainer .icons .card {
-      width: 60px;
-      height: 60px;
-      margin: 10px;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+    to {
+      opacity: 1;
     }
   }
+
 
   /* Hamburger Menu Button Animation */
   .hamburger.active .bar1 {

@@ -1,96 +1,56 @@
+// Toggle navigation menu and hamburger menu
 function toggleNav() {
-  var nav = document.querySelector('.nav');
-  var hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.nav');
+  const hamburger = document.querySelector('.hamburger');
   nav.classList.toggle('active');
   hamburger.classList.toggle('active');
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  var navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(function(link) {
-      link.addEventListener('click', function() {
-          toggleNav();
-      });
-  });
-});
-
-
+// Close hamburger menu when a menu item is selected
 document.addEventListener('DOMContentLoaded', () => {
-  let isScrolling;
-
-  window.addEventListener('scroll', () => {
-    document.body.classList.add('scrolling');
-
-    // Clear our timeout throughout the scroll
-    window.clearTimeout(isScrolling);
-
-    // Set a timeout to run after scrolling ends
-    isScrolling = setTimeout(() => {
-      document.body.classList.remove('scrolling');
-    }, 500);
+  const navLinks = document.querySelectorAll('.li');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      toggleNav();
+    });
   });
 
-  // Function to scroll to the target element
-  function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      console.log(`Scrolling to section: ${sectionId}`);
-      section.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      console.log(`Section not found: ${sectionId}`);
-    }
-  }
-
-  // Adding event listeners to navigation items
-  document.getElementById('nav-home').addEventListener('click', function () {
-    console.log('Home clicked');
-    scrollToSection('home');
-  });
-
-  document.getElementById('nav-aboutme').addEventListener('click', function () {
-    console.log('About clicked');
-    scrollToSection('aboutme');
-  });
-
-  document.getElementById('nav-projects').addEventListener('click', function () {
-    console.log('Projects clicked');
-    scrollToSection('projects');
-  });
-
-  document.getElementById('nav-experiences').addEventListener('click', function () {
-    console.log('Experiences clicked');
-    scrollToSection('experiences');
-  });
-
-  document.getElementById('nav-hire').addEventListener('click', function () {
-    console.log('Experiences clicked');
-    scrollToSection('hire');
-  });
-
-
-
-  document.getElementById('nav-education').addEventListener('click', function () {
-    console.log('Education clicked');
-    scrollToSection('education');
-  });
+  // Add event listeners to navigation items
+  document.getElementById('nav-home').addEventListener('click', () => scrollToSection('home'));
+  document.getElementById('nav-aboutme').addEventListener('click', () => scrollToSection('aboutme'));
+  document.getElementById('nav-projects').addEventListener('click', () => scrollToSection('projects'));
+  document.getElementById('nav-experiences').addEventListener('click', () => scrollToSection('experiences'));
+  document.getElementById('nav-education').addEventListener('click', () => scrollToSection('education'));
+  document.getElementById('nav-hire').addEventListener('click', () => scrollToSection('hire'));
 });
-// Get the button
-let scrollTopBtn = document.getElementById("scrollTopBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollTopBtn.style.display = "block";
+// Scroll to the target section
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    console.log(`Scrolling to section: ${sectionId}`);
+    section.scrollIntoView({ behavior: 'smooth' });
   } else {
-    scrollTopBtn.style.display = "none";
+    console.log(`Section not found: ${sectionId}`);
   }
-};
+}
 
-// When the user clicks on the button, scroll to the top of the document
-scrollTopBtn.addEventListener('click', function () {
+// Show/hide scroll to top button
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+window.addEventListener('scroll', () => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollTopBtn.style.display = 'block';
+  } else {
+    scrollTopBtn.style.display = 'none';
+  }
+});
+
+// Scroll to top when button is clicked
+scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+// Validate form inputs
 function validateForm() {
   let isValid = true;
 
@@ -134,32 +94,33 @@ function validateForm() {
   return isValid;
 }
 
+// Populate country code select box
 document.addEventListener('DOMContentLoaded', () => {
   const countryCodeSelect = document.getElementById('countryCode');
 
   fetch('https://restcountries.com/v3.1/all')
-      .then(response => response.json())
-      .then(data => {
-          const sortedData = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
-          sortedData.forEach(country => {
-              const option = document.createElement('option');
-              option.value = `${country.idd.root}${country.idd.suffixes ? country.idd.suffixes[0] : ''}`;
-              option.textContent = `${country.flag} ${country.name.common} ${option.value}`;
-              countryCodeSelect.appendChild(option);
-          });
-      })
-      .catch(error => console.error('Error fetching country codes:', error));
+    .then(response => response.json())
+    .then(data => {
+      const sortedData = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+      sortedData.forEach(country => {
+        const option = document.createElement('option');
+        option.value = `${country.idd.root}${country.idd.suffixes ? country.idd.suffixes[0] : ''}`;
+        option.textContent = `${country.flag} ${country.name.common} ${option.value}`;
+        countryCodeSelect.appendChild(option);
+      });
+    })
+    .catch(error => console.error('Error fetching country codes:', error));
 
   // Add keydown event listener to filter options
   countryCodeSelect.addEventListener('keydown', (event) => {
-      const char = String.fromCharCode(event.keyCode).toLowerCase();
-      const options = Array.from(countryCodeSelect.options);
-      
-      for (let i = 0; i < options.length; i++) {
-          if (options[i].textContent.toLowerCase().startsWith(char)) {
-              countryCodeSelect.selectedIndex = i;
-              break;
-          }
+    const char = String.fromCharCode(event.keyCode).toLowerCase();
+    const options = Array.from(countryCodeSelect.options);
+    
+    for (let i = 0; i < options.length; i++) {
+      if (options[i].textContent.toLowerCase().startsWith(char)) {
+        countryCodeSelect.selectedIndex = i;
+        break;
       }
+    }
   });
 });

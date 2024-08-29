@@ -1102,3 +1102,42 @@ select {
   font-size: 16px;
   flex: 1;
 }
+
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .container3 {
+    padding: 0 3%; /* Adjust padding for smaller screens */
+  }
+  
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    margin-top: 20px; /* Increase margin-top on mobile */
+  }
+
+  .line {
+    display: none; /* Hide the line on smaller screens */
+  }
+}
+
+/* Media Query for Extra Small Screens */
+@media (max-width: 480px) {
+  .contact-info h1 {
+    font-size: 1.5rem; /* Further reduce font size on very small screens */
+  }
+
+  .title,
+  .description,
+  .contact-details p {
+    font-size: 12px; /* Further reduce font size on very small screens */
+  }
+  
+  .contact-form button {
+    font-size: 16px; /* Further reduce button font size on very small screens */
+  }
+
+  .phone-input {
+    flex-direction: column; /* Stack phone input fields vertically */
+  }
+}
