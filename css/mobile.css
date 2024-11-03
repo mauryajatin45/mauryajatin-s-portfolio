@@ -230,4 +230,7 @@
         rgba(221, 221, 221, 1) 0%,
         rgba(204, 204, 204, 1) 80%);
   }
+  .left-arrow, .right-arrow, .right-arrow-part, .left-arrow-part{
+    display: none;
+  }
 }

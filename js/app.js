@@ -30,7 +30,7 @@
     if (section) {
       console.log(`Scrolling to section: ${sectionId}`);
       section.scrollIntoView({ behavior: 'smooth' });
-      triggerSectionAnimation(sectionId); // Trigger animation when scrolling
+      triggerSectionAnimation(sectionId);
     } else {
       console.log(`Section not found: ${sectionId}`);
     }
@@ -43,8 +43,8 @@
     const typingDuration = 3000;
     const typingSpeed = typingDuration / textToType.length;
 
-    animatedText.innerHTML = ""; // Start with an empty string
-    animatedText.style.opacity = "1"; // Make the text visible
+    animatedText.innerHTML = "";
+    animatedText.style.opacity = "1";
 
     let index = 0;
 
@@ -54,11 +54,10 @@
         index++;
         setTimeout(typeNextCharacter, typingSpeed);
       } else {
-        animatedText.classList.add('blink-caret'); // Add caret blinking after typing completes
+        animatedText.classList.add('blink-caret');
       }
     };
 
-    // Start typing after 1 second
     setTimeout(typeNextCharacter, 1000);
   };
 
@@ -66,25 +65,22 @@
     const nav = document.querySelector('.nav');
     const indicator = document.querySelector('.indicator');
 
-    // Wait 4 seconds before applying the fade-in effect
     setTimeout(() => {
-      nav.classList.add('fade-in'); // Add fade-in class to start the animation
-      nav.style.display = 'flex'; // Ensure the nav is displayed
+      nav.classList.add('fade-in');
+      nav.style.display = 'flex';
       indicator.style.display = 'block';
     }, 4000);
   };
 
-  // Function to trigger section animation
   const triggerSectionAnimation = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.classList.add('container-fade-in'); // Add fade-in class
-      section.style.display = 'block'; // Ensure the section is displayed
-      checkScroll(); // Check scroll to potentially add visibility class
+      section.classList.add('container-fade-in');
+      section.style.display = 'block';
+      checkScroll();
     }
   };
 
-  // Ensure you call startAllAnimations once the DOM is fully loaded
   document.addEventListener('DOMContentLoaded', () => {
     startAllAnimations();
     startTypingAnimation();
@@ -97,7 +93,6 @@
     });
   });
 
-  // Function to check if an element is in the viewport
   const isElementInViewport = (elem) => {
     const rect = elem.getBoundingClientRect();
     return (
@@ -108,16 +103,15 @@
     );
   };
 
-  // Function to add the visible class when scrolled into view
   const checkScroll = () => {
     const sections = document.querySelectorAll('.container-fade-in');
     sections.forEach(section => {
       if (isElementInViewport(section)) {
-        section.classList.add('container-visible'); // Add visible class if in viewport
+        section.classList.add('container-visible');
       }
     });
   };
-  // Add event listener for scroll event
+
   window.addEventListener('scroll', () => {
     checkScroll();
 
@@ -136,7 +130,6 @@
     }
   });
 
-  // Populate country code select box
   const populateCountryCodes = () => {
     const countryCodeSelect = document.getElementById('countryCode');
 
@@ -154,7 +147,6 @@
       .catch(error => console.error('Error fetching country codes:', error));
   };
 
-  // Filter country code options
   const filterCountryOptions = (event) => {
     const char = String.fromCharCode(event.keyCode).toLowerCase();
     const options = Array.from(event.target.options);
@@ -168,45 +160,77 @@
     });
   };
 
+  const allCards = document.querySelector('.cards-container');
+  const leftArrow = document.getElementById('left-arrow');
+  const rightArrow = document.getElementById('right-arrow');
+
+  // Update arrow visibility based on scroll position
+  function updateArrowVisibility() {
+    const scrollWidth = allCards.scrollWidth;
+    const clientWidth = allCards.clientWidth;
+
+    leftArrow.style.display = allCards.scrollLeft > 0 ? 'block' : 'none';
+    rightArrow.style.display = scrollWidth > clientWidth && allCards.scrollLeft < scrollWidth - clientWidth ? 'block' : 'none';
+  }
+
+  rightArrow.addEventListener('click', () => {
+    allCards.scrollBy({ left: 300, behavior: 'smooth' });
+    updateArrowVisibility();
+  });
+
+  leftArrow.addEventListener('click', () => {
+    allCards.scrollBy({ left: -300, behavior: 'smooth' });
+    updateArrowVisibility();
+  });
+
+  // Swipe detection
+  let startX, isMoving = false;
+
+  allCards.addEventListener('touchstart', (event) => {
+    startX = event.touches[0].clientX;
+    isMoving = false; // Reset moving state
+  });
+
+  allCards.addEventListener('touchmove', (event) => {
+    const moveX = event.touches[0].clientX;
+    const diffX = startX - moveX;
+
+    // Only allow horizontal swipe
+    if (Math.abs(diffX) > 30) {
+      isMoving = true; // Set moving state
+      event.preventDefault(); // Prevent default scroll
+
+      if (diffX > 0) {
+        // Swiped left
+        rightArrow.click(); // Trigger right arrow click
+      } else {
+        // Swiped right
+        leftArrow.click(); // Trigger left arrow click
+      }
+    }
+  });
+
+  allCards.addEventListener('touchend', () => {
+    if (!isMoving) {
+      // If no movement, reset
+      startX = null;
+    }
+  });
+
+  // Initial check for arrow visibility
+  updateArrowVisibility();
+  window.addEventListener('resize', updateArrowVisibility);
+
+  // Prevent scrolling for the first 4 seconds
+  function preventScroll() {
+    window.scrollTo(0, 0);
+  }
+
+  // Add event listener to prevent scrolling
+  window.addEventListener('scroll', preventScroll);
+
+  // Allow scrolling after 4 seconds
+  setTimeout(() => {
+    window.removeEventListener('scroll', preventScroll);
+  }, 4000);
 })();
-
-const allCards = document.querySelector('.cards-container');
-const leftArrow = document.getElementById('left-arrow');
-const rightArrow = document.getElementById('right-arrow');
-
-// Update arrow visibility based on scroll position
-function updateArrowVisibility() {
-  const scrollWidth = allCards.scrollWidth;
-  const clientWidth = allCards.clientWidth;
-
-  leftArrow.style.display = allCards.scrollLeft > 0 ? 'block' : 'none';
-  rightArrow.style.display = scrollWidth > clientWidth && allCards.scrollLeft < scrollWidth - clientWidth ? 'block' : 'none';
-}
-
-rightArrow.addEventListener('click', () => {
-  allCards.scrollBy({ left: 300, behavior: 'smooth' });
-  updateArrowVisibility();
-});
-
-leftArrow.addEventListener('click', () => {
-  allCards.scrollBy({ left: -300, behavior: 'smooth' });
-  updateArrowVisibility();
-});
-
-// Initial check for arrow visibility
-updateArrowVisibility();
-window.addEventListener('resize', updateArrowVisibility); // Update on window resize
-
-
-// Prevent scrolling for the first 4 seconds
-function preventScroll() {
-  window.scrollTo(0, 0);
-}
-
-// Add event listener to prevent scrolling
-window.addEventListener('scroll', preventScroll);
-
-// Allow scrolling after 4 seconds
-setTimeout(() => {
-  window.removeEventListener('scroll', preventScroll);
-}, 4000);
