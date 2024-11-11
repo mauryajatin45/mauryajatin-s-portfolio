@@ -544,7 +544,7 @@ body {
   animation: effect_two 0.4s 1;
 }
 
-.card-int__button::before {
+.card-int__button::before, .card-int__button_live_demo {
   content: "Github Repository";
   color: white;
   display: flex;
