@@ -217,20 +217,25 @@
     }
   });
 
+  let unavailable = document.querySelector('.live_demo_elephanta');
+  unavailable.addEventListener('click', ()=>{
+    alert("Live Demo Unavailale")
+  })
+
   // Initial check for arrow visibility
-  updateArrowVisibility();
-  window.addEventListener('resize', updateArrowVisibility);
+  // updateArrowVisibility();
+  // window.addEventListener('resize', updateArrowVisibility);
 
-  // Prevent scrolling for the first 4 seconds
-  function preventScroll() {
-    window.scrollTo(0, 0);
-  }
+  // // Prevent scrolling for the first 4 seconds
+  // function preventScroll() {
+  //   window.scrollTo(0, 0);
+  // }
 
-  // Add event listener to prevent scrolling
-  window.addEventListener('scroll', preventScroll);
+  // // Add event listener to prevent scrolling
+  // window.addEventListener('scroll', preventScroll);
 
-  // Allow scrolling after 4 seconds
-  setTimeout(() => {
-    window.removeEventListener('scroll', preventScroll);
-  }, 4000);
+  // // Allow scrolling after 4 seconds
+  // setTimeout(() => {
+  //   window.removeEventListener('scroll', preventScroll);
+  // }, 4000);
 })();

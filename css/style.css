@@ -524,9 +524,9 @@ body {
 .card-int__button {
   cursor: pointer;
   margin: 20px 0 0 0;
-  padding: 7px 20px;
+  padding: 7px 32px;
   width: 100%;
-  background-color: rgb(238, 246, 255);
+  background-color: #e8e5e5;
   border: none;
   color: black;
   position: relative;
@@ -544,8 +544,8 @@ body {
   animation: effect_two 0.4s 1;
 }
 
-.card-int__button::before, .card-int__button_live_demo {
-  content: "Github Repository";
+.card-int__button::before, .card-int__button_live_demo::before {
+  content: "Redirect";
   color: white;
   display: flex;
   align-items: center;
@@ -566,6 +566,14 @@ body {
   transform: translateX(0%);
 }
 
+.button_setter{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+}
 .excerpt {
   font-size: 14px;
 }
