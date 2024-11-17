@@ -222,7 +222,6 @@
     alert("Live Demo Unavailale")
   })
 
-  // Initial check for arrow visibility
   updateArrowVisibility();
   window.addEventListener('resize', updateArrowVisibility);
 
