@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certification gallery</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+        <div class="header">
+            <h1>Certification Gallery</h1>
+        </div>
+<!-- Card container for images -->
+<div class="card-container" id="card-container"></div>
+
+<!-- Modal for displaying the expanded image -->
+<div id="modal" class="modal">
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <img id="modal-image" class="modal-content">
+    <div id="modal-caption" class="caption"></div>
+</div>
+
+
+    </div>
+  </body>
+  <script src="./js/app.js"></script>
+</html>

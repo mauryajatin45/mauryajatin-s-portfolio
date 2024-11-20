@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mainContainer {
+  background-color: #dddddd;
+  margin: 0;
+  height: 100vh; /* Full height of the viewport */
+}
+
+.header {
+  padding: 2rem;
+  background-color: #dddddd;
+  width: 100%;
+  margin: 0;
+  height: 100px; 
+}
+
+h1 {
+  font-family: "Playwrite GB S", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5em;
+  color: #333;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center; /* Center cards horizontally */
+  align-items: center; /* Center cards vertically */
+  flex-wrap: wrap;
+  gap: 20px;
+  height: calc(100vh - 100px); /* Takes up remaining space after header */
+  padding: 20px; /* Optional: Space around the cards */
+  overflow-y: auto; /* Makes sure the container scrolls if content overflows */
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* Maximize button style */
+.maximize-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.maximize-btn:hover {
+  background-color: #45a049;
+}
+
+.maximize-btn:focus {
+  outline: none;
+}
+
+/* Modal container */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top of everything */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+  overflow: auto; /* Enable scroll if needed */
+  padding-top: 60px;
+  text-align: center;
+}
+
+/* Modal content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%; /* Adjust the size of the image */
+  max-width: 900px;
+  max-height: 80vh;
+  object-fit: contain; /* Maintain aspect ratio of the image */
+  border-radius: 10px;
+}
+
+/* Modal caption (image name) */
+.caption {
+  color: white;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+/* Close button for modal */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001; /* Make sure close button stays above modal */
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #ccc;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close-btn:focus {
+  outline: none;
+}
+
+/* Additional modal style: Center modal content */
+.modal-content {
+  animation: fadeIn 0.5s;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

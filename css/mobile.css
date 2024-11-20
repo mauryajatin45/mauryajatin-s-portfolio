@@ -226,6 +226,10 @@
         rgba(204, 204, 204, 1) 10%);
   }
 
+  .nav{
+    gap: 0%;
+  }
+
   /* Center the name text (JATIN MAURYA) and make it on a single line */
   .contact-info h1 {
     text-align: center;

@@ -1,0 +1,158 @@
+{
+  "A gentle Introduction to Azure AI": {
+    "value": "images\\A gentle Introduction to Azure AI.jpg",
+    "description": "Certificate for completing an introduction to Azure AI and its applications."
+  },
+  "Bootstrap in hindi": {
+    "value": "images\\Bootstrap in hindi.jpg",
+    "description": "Certificate for completing a Bootstrap course in Hindi, covering responsive web design."
+  },
+  "C for begginer": {
+    "value": "images\\C for begginer.jpg",
+    "description": "Certificate for completing a beginner-level C programming course."
+  },
+  "C Programming": {
+    "value": "images\\C Programming.jpg",
+    "description": "Certificate for completing a C programming course, learning fundamental concepts."
+  },
+  "C++ Bootcamp": {
+    "value": "images\\C++ Bootcamp.jpg",
+    "description": "Certificate for completing an intensive C++ bootcamp, mastering object-oriented programming."
+  },
+  "ChatGPT Bootcamp": {
+    "value": "images\\ChatGPT Bootcamp.jpg",
+    "description": "Certificate for completing a ChatGPT Bootcamp, learning to use AI in real-world applications."
+  },
+  "Cloud Elevate - Powering GenAI": {
+    "value": "images\\Cloud Elevate - Powering GenAI.jpg",
+    "description": "Certificate for understanding how cloud technologies power Generative AI solutions."
+  },
+  "Communicate Effectively at Work": {
+    "value": "images\\Communicate Effectively at Work.jpg",
+    "description": "Certificate for mastering effective communication skills in a professional work environment."
+  },
+  "Concepts of OOPs": {
+    "value": "images\\Concepts of OOPs.jpg",
+    "description": "Certificate for understanding and applying Object-Oriented Programming principles."
+  },
+  "CSS Properties": {
+    "value": "images\\CSS Properties.jpg",
+    "description": "Certificate for learning and applying CSS properties to design web pages."
+  },
+  "CSS Tutorial": {
+    "value": "images\\CSS Tutorial.jpg",
+    "description": "Certificate for completing a comprehensive CSS tutorial for web development."
+  },
+  "Data Science with Python": {
+    "value": "images\\Data Science with Python.jpg",
+    "description": "Certificate for completing a Data Science course using Python for data analysis and machine learning."
+  },
+  "Dev C++ Tutorial": {
+    "value": "images\\Dev C++ Tutorial.jpg",
+    "description": "Certificate for completing a tutorial on programming in C++ using Dev C++ IDE."
+  },
+  "Flutter": {
+    "value": "images\\Flutter.jpg",
+    "description": "Certificate for learning to build mobile applications using the Flutter framework."
+  },
+  "Front End Development - CSS": {
+    "value": "images\\Front End Development - CSS.jpg",
+    "description": "Certificate for mastering CSS in front-end web development."
+  },
+  "Front end development": {
+    "value": "images\\Front end development.jpg",
+    "description": "Certificate for learning front-end web development, including HTML, CSS, and JavaScript."
+  },
+  "Getting started with ChatGPT - 4": {
+    "value": "images\\Getting started with ChatGPT - 4.jpg",
+    "description": "Certificate for completing a course on getting started with ChatGPT and its capabilities."
+  },
+  "Getting Started with Gemini": {
+    "value": "images\\Getting Started with Gemini.jpg",
+    "description": "Certificate for understanding and using the Gemini AI model for various applications."
+  },
+  "Git and Github": {
+    "value": "images\\Git and Github.jpg",
+    "description": "Certificate for mastering Git version control and Github for collaborative coding."
+  },
+  "GitHub Tutorial for Beginners": {
+    "value": "images\\GitHub Tutorial for Beginners.jpg",
+    "description": "Certificate for completing a beginner's tutorial on using GitHub for version control and collaboration."
+  },
+  "Hackathon - Machine Learning": {
+    "value": "images\\Hackathon - Machine Learning.jpg",
+    "description": "Certificate for participating and contributing to a hackathon focused on machine learning."
+  },
+  "HTML Attributes and Tags": {
+    "value": "images\\HTML Attributes and Tags.jpg",
+    "description": "Certificate for learning HTML tags and attributes to build structured web content."
+  },
+  "HTML Tutorial": {
+    "value": "images\\HTML Tutorial.jpg",
+    "description": "Certificate for completing an HTML tutorial and learning the basics of web development."
+  },
+  "India's First AWS Cloud Club Student Symposia 2023": {
+    "value": "images\\India's First AWS Cloud Club Student Symposia 2023.jpg",
+    "description": "Certificate for attending India's first AWS Cloud Club Student Symposia in 2023."
+  },
+  "India's First AWS Cloud Club Student Symposia": {
+    "value": "images\\India's First AWS Cloud Club Student Symposia.jpg",
+    "description": "Certificate for participating in the AWS Cloud Club Student Symposia event in India."
+  },
+  "Internnship completetion Certificate": {
+    "value": "images\\Internnship completetion Certificate.jpg",
+    "description": "Certificate for completing an internship program and gaining practical work experience."
+  },
+  "Introduction to javascript": {
+    "value": "images\\Introduction to javascript.jpg",
+    "description": "Certificate for learning the basics of JavaScript programming."
+  },
+  "Jatin Maurya C++ course Great learning": {
+    "value": "images\\Jatin Maurya C++ course Great learning.jpg",
+    "description": "Certificate for completing the C++ course by Jatin Maurya on Great Learning."
+  },
+  "Jatin Maurya": {
+    "value": "images\\Jatin Maurya.png",
+    "description": "Certificate for completing a C++ programming course by Jatin Maurya."
+  },
+  "Java Bootcamp": {
+    "value": "images\\Java Bootcamp.jpg",
+    "description": "Certificate for completing a Java Bootcamp, covering core Java programming concepts."
+  },
+  "Java Programming": {
+    "value": "images\\Java Programming.jpg",
+    "description": "Certificate for completing a Java programming course."
+  },
+  "JQuery": {
+    "value": "images\\JQuery.jpg",
+    "description": "Certificate for learning and using jQuery for dynamic web page development."
+  },
+  "Network Security": {
+    "value": "images\\Network Security.jpg",
+    "description": "Certificate for completing a course on network security practices and protocols."
+  },
+  "Oracle SQL": {
+    "value": "images\\Oracle SQL.jpg",
+    "description": "Certificate for learning Oracle SQL for database management and query optimization."
+  },
+  "Sql Bootcamp": {
+    "value": "images\\Sql Bootcamp.jpg",
+    "description": "Certificate for completing a comprehensive bootcamp on SQL database management."
+  },
+  "Treasure Hunt": {
+    "value": "images\\Treasure Hunt.jpg",
+    "description": "Certificate for participating in and completing the Treasure Hunt event."
+  },
+  "Turbo C++": {
+    "value": "images\\Turbo C++.jpg",
+    "description": "Certificate for learning Turbo C++ for fast and efficient programming."
+  },
+  "WordPress with Docker": {
+    "value": "images\\WordPress with Docker.jpg",
+    "description": "Certificate for learning how to deploy WordPress using Docker."
+  },
+  "Wordpress": {
+    "value": "images\\Wordpress.jpg",
+    "description": "Certificate for completing a WordPress development course."
+  }
+}

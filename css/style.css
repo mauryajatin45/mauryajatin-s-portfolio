@@ -17,7 +17,7 @@ body {
 
 .nav {
   top: 1.2%;
-  gap: 11%;
+  gap: 6%;
   position: fixed;
   width: 100vw;
   margin: auto;
@@ -139,6 +139,11 @@ body {
     border-right-color: black;
     /* Change to the same color as the text */
   }
+}
+
+a{
+  text-decoration: none;
+  color: #000000;
 }
 
 .fade-in {
