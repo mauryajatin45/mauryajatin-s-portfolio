@@ -140,21 +140,38 @@
   // Toggles the visibility of additional projects
   const setupProjectToggle = () => {
     const seeMoreBtn = document.getElementById("see-more-btn");
-
+  
     if (seeMoreBtn) {
       seeMoreBtn.addEventListener("click", () => {
         const extraCards = document.querySelectorAll(".extra");
         const spanElement = document.querySelector(".spn2");
-
+        const projects = document.querySelector(".projects");
+  
         const isExpanded = spanElement.textContent === "See Less Projects";
+  
+        // Toggle visibility of extra cards
         extraCards.forEach((card) => {
           card.style.display = isExpanded ? "none" : "flex";
         });
-
+  
+        // Update button text
         spanElement.textContent = isExpanded ? "See More" : "See Less Projects";
+  
+        // Apply styles only for desktop view
+        if (window.innerWidth > 768) {
+          projects.style.marginTop = isExpanded ? "3%" : "10%";
+          projects.style.marginBottom = isExpanded ? "0" : "10%";
+          projects.style.height = isExpanded ? "80vh" : "100vh";
+        } else {
+          // Reset styles for mobile view
+          projects.style.marginTop = "";
+          projects.style.marginBottom = "";
+          projects.style.height = "";
+        }
       });
     }
   };
+  
 
   // Initialization
   document.addEventListener("DOMContentLoaded", () => {
