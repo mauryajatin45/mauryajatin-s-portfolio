@@ -1,4 +1,3 @@
-// Function to load images and create cards dynamically
 async function loadImages() {
     try {
         // Fetch the JSON data containing image names, paths, and descriptions
@@ -18,6 +17,7 @@ async function loadImages() {
             const img = document.createElement('img');
             img.src = data.value;  // Set the image source from the value
             img.alt = imageName;    // Set the alt text to image name
+            img.loading = "lazy";  // Add lazy loading attribute
 
             // Create the content container for title and description
             const content = document.createElement('div');
