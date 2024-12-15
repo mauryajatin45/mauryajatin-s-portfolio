@@ -149,12 +149,10 @@ a {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    /* Start invisible */
   }
 
   to {
     opacity: 1;
-    /* End fully visible */
   }
 }
 
@@ -229,18 +227,13 @@ a {
 
 .container-fade-in {
   opacity: 0;
-  /* Start invisible */
   transform: translateY(20px);
-  /* Start slightly lower */
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  /* Smooth transition */
 }
 
 .container-visible {
   opacity: 1;
-  /* Fully visible */
   transform: translateY(0);
-  /* Reset to original position */
 }
 
 .Skills {

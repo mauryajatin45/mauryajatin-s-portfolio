@@ -1,19 +1,21 @@
 (() => {
-  // Utility Functions
-  const isElementInViewport = (elem) => {
-    const rect = elem.getBoundingClientRect();
+  // Helper function: Checks if an element is in the viewport
+  const isElementInViewport = (el) => {
+    const rect = el.getBoundingClientRect();
     return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom > 0 &&
+      rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+      rect.right > 0
     );
   };
 
+  // Smooth scroll to the top of the page
   const smoothScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  // Scrolls smoothly to a specific section
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -23,6 +25,7 @@
     }
   };
 
+  // Adds 'container-visible' class to elements in the viewport
   const checkScroll = () => {
     const sections = document.querySelectorAll(".container-fade-in");
     sections.forEach((section) => {
@@ -32,22 +35,15 @@
     });
   };
 
+  // Toggles the display style of an element
   const toggleElementDisplay = (element, displayStyle) => {
     if (element) {
       element.style.display = displayStyle;
     }
   };
 
-  // Navigation and Scroll Setup
+  // Sets up navigation links for smooth scrolling
   const setupNavLinks = () => {
-    const navLinks = document.querySelectorAll(".navclass");
-
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        console.log("Navigation toggled");
-      });
-    });
-
     const sections = {
       "nav-home": "home",
       "nav-projects": "projects",
@@ -63,7 +59,7 @@
     });
   };
 
-  // Typing Animation Setup
+  // Starts typing animation for a given text
   const startTypingAnimation = () => {
     const animatedText = document.getElementById("animatedText");
     const textToType = "Full Stack Developer";
@@ -86,7 +82,7 @@
     setTimeout(typeNextCharacter, 1000);
   };
 
-  // Section Visibility and Scroll-to-Top Button
+  // Sets up scroll behavior for navigation and scroll-to-top button
   const setupScrollBehavior = () => {
     const scrollTopBtn = document.getElementById("scrollTopBtn");
     const nav = document.querySelector(".nav");
@@ -95,21 +91,16 @@
     window.addEventListener("scroll", () => {
       checkScroll();
 
-      if (window.scrollY > 20) {
-        toggleElementDisplay(scrollTopBtn, "block");
-        toggleElementDisplay(nav, "none");
-        toggleElementDisplay(downloadCV, "flex");
-      } else {
-        toggleElementDisplay(scrollTopBtn, "none");
-        toggleElementDisplay(nav, "flex");
-        toggleElementDisplay(downloadCV, "none");
-      }
+      const isScrolled = window.scrollY > 20;
+      toggleElementDisplay(scrollTopBtn, isScrolled ? "block" : "none");
+      toggleElementDisplay(nav, isScrolled ? "none" : "flex");
+      toggleElementDisplay(downloadCV, isScrolled ? "flex" : "none");
     });
 
     scrollTopBtn.addEventListener("click", smoothScrollToTop);
   };
 
-  // Animations Setup
+  // Starts animations for navigation and indicator
   const startAllAnimations = () => {
     const nav = document.querySelector(".nav");
     const indicator = document.querySelector(".indicator");
@@ -121,7 +112,7 @@
     }, 4000);
   };
 
-  // Dynamic Country Code Population
+  // Dynamically populates country codes in a dropdown
   const populateCountryCodes = () => {
     const countryCodeSelect = document.getElementById("countryCode");
 
@@ -146,25 +137,23 @@
       .catch((error) => console.error("Error fetching country codes:", error));
   };
 
-  // Project Toggle (See More/Less)
+  // Toggles the visibility of additional projects
   const setupProjectToggle = () => {
     const seeMoreBtn = document.getElementById("see-more-btn");
-    seeMoreBtn.addEventListener("click", () => {
-      const extraCards = document.querySelectorAll(".extra");
-      const projects = document.querySelector(".projects");
-      const spanElement = document.querySelector(".spn2");
 
-      const isExpanded = spanElement.textContent === "See Less Projects";
+    if (seeMoreBtn) {
+      seeMoreBtn.addEventListener("click", () => {
+        const extraCards = document.querySelectorAll(".extra");
+        const spanElement = document.querySelector(".spn2");
 
-      extraCards.forEach((card) => {
-        card.style.display = isExpanded ? "none" : "flex";
+        const isExpanded = spanElement.textContent === "See Less Projects";
+        extraCards.forEach((card) => {
+          card.style.display = isExpanded ? "none" : "flex";
+        });
+
+        spanElement.textContent = isExpanded ? "See More" : "See Less Projects";
       });
-
-      spanElement.textContent = isExpanded ? "See More" : "See Less Projects";
-      projects.style.marginTop = isExpanded ? "3%" : "10%";
-      projects.style.marginBottom = isExpanded ? "0" : "10%";
-      projects.style.height = isExpanded ? "80vh" : "100vh";
-    });
+    }
   };
 
   // Initialization

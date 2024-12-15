@@ -1,10 +1,12 @@
 @media (max-width: 768px) {
   body {
-    width: 100vw; /* Ensure the body takes up only the full viewport width */
+    width: 100vw;
+    /* Ensure the body takes up only the full viewport width */
     height: 100vh;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-x: hidden;
+    /* Prevent horizontal overflow */
   }
 
   .form {
@@ -50,9 +52,8 @@
   }
 
   .work,
-  .projects,
   .aboutme {
-    width: 90%;
+    width: 100%;
     padding: 10px;
   }
 
@@ -68,29 +69,36 @@
     height: auto;
   }
 
-  .soccard {
-    width: 90%;
-    height: auto;
-  }
-
-  .button {
-    --width: 100px;
-    --height: 30px;
-    font-size: 0.8rem;
-  }
-
   .container3 {
-    padding: 0 3%; /* Adjust padding for smaller screens */
+    padding: 0 3%;
+    display: block;
+    background: rgb(221, 221, 221);
+    background: linear-gradient(180deg,
+        rgba(221, 221, 221, 1) 0%,
+        rgba(204, 204, 204, 1) 10%);
   }
 
   .contact-info,
   .contact-form {
     width: 100%;
-    margin-top: 20px; /* Increase margin-top on mobile */
+    margin-top: 20px;
   }
 
-  .line {
-    display: none; /* Hide the line on smaller screens */
+  .contact-info h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  .contact-info .title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .description,
+  .contact-details {
+    display: none;
   }
 
   .commonskill {
@@ -110,53 +118,68 @@
   }
 
   .hometxt h1 {
-    font-size: 3rem; /* Smaller heading */
+    font-size: 3rem;
+    /* Smaller heading */
   }
 
   .hometxt h2 {
-    font-size: 1.5rem; /* Adjust subtitle size */
+    font-size: 1.5rem;
+    /* Adjust subtitle size */
   }
 
   .aboutme {
-    width: 90%; /* Full width on mobile */
-    padding: 10px; /* Less padding */
+    width: 90%;
+    /* Full width on mobile */
+    padding: 10px;
+    /* Less padding */
   }
 
   .projects,
   .work,
   .Skills {
-    width: 100%; /* Full width for sections */
-    padding: 10px; /* Less padding */
+    width: 100%;
+    /* Full width for sections */
+    padding: 10px;
+    /* Less padding */
   }
 
   .allcards {
-    flex-direction: column; /* Stack cards vertically */
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    flex-direction: column;
+    /* Stack cards vertically */
+    overflow-x: hidden;
+    /* Prevent horizontal overflow */
   }
 
   .card {
-    width: 70%; /* Card full width */
-    margin: 10px; /* Margin for spacing */
+    width: 70%;
+    /* Card full width */
+    margin: 10px;
+    /* Margin for spacing */
     background-color: #eeeeee;
   }
 
   .contact-info,
   .contact-form {
-    width: 100%; /* Full width for contact sections */
+    width: 100%;
+    /* Full width for contact sections */
   }
 
   .contact-details p {
-    font-size: 14px; /* Adjust font size */
+    font-size: 14px;
+    /* Adjust font size */
   }
 
   .button {
-    width: 100%; /* Full width button */
-    padding: 10px; /* Increased padding for easier tapping */
+    width: 100%;
+    /* Full width button */
+    padding: 10px;
+    /* Increased padding for easier tapping */
   }
 
   .footer {
-    flex-direction: column; /* Stack footer items */
-    padding: 10px; 
+    flex-direction: column;
+    /* Stack footer items */
+    padding: 10px;
     background: rgb(204, 204, 204);
     background: linear-gradient(180deg,
         rgba(204, 204, 204, 1) 0%,
@@ -164,13 +187,16 @@
   }
 
   .navtxtprop {
-    font-size: 1.5rem; /* Reduce font size for navigation text */
+    font-size: 1.5rem;
+    /* Reduce font size for navigation text */
   }
 
   .right-arrow,
   .left-arrow {
-    width: 40px; /* Adjust arrow size for mobile */
-    height: 40px; /* Adjust arrow size for mobile */
+    width: 40px;
+    /* Adjust arrow size for mobile */
+    height: 40px;
+    /* Adjust arrow size for mobile */
   }
 
   /* Ensure text remains readable */
@@ -178,7 +204,8 @@
   .workh4,
   .education__title,
   .education__subtitle {
-    font-size: 1.5rem; /* Adjust for mobile readability */
+    font-size: 1.5rem;
+    /* Adjust for mobile readability */
   }
 
   .left-arrow {
@@ -193,7 +220,7 @@
 
   .cards-container {
     display: flex;
-    width: calc(100% - 20px);
+    width: 100%;
     scroll-behavior: smooth;
     overflow: hidden;
   }
@@ -212,61 +239,26 @@
   .left-arrow-part {
     display: none;
   }
-}
 
-/* General styles for mobile devices */
-@media only screen and (max-width: 768px) {
-  
-  /* Ensure that contact-info and contact-form are stacked vertically */
-  .container3 {
-    display: block; 
-    background: rgb(221, 221, 221);
-    background: linear-gradient(180deg,
-        rgba(221, 221, 221, 1) 0%,
-        rgba(204, 204, 204, 1) 10%);
-  }
-
-  .nav{
+  .nav {
     gap: 0%;
   }
 
-  /* Center the name text (JATIN MAURYA) and make it on a single line */
-  .contact-info h1 {
-    text-align: center;
-    font-size: 2.5rem; /* Adjust font size as needed */
-    margin: 0;
-  }
-
-  /* Center the title (Web Developer | Freelancer) */
-  .contact-info .title {
-    text-align: center;
-    font-size: 1.5rem; /* Adjust font size as needed */
-    margin: 0.5rem 0;
-  }
-
-  /* Hide the description and contact-details for mobile devices */
-  .description, .contact-details {
-    display: none;
-  }
-
-  /* Ensure contact-form comes below the title and contact-info */
   .contact-form {
-    padding: 0 1rem; /* Add padding for better form spacing */
+    padding: 0 1rem;
   }
 
-  /* Ensure the contact form inputs have full width */
   .contact-form form input,
   .contact-form form textarea,
   .contact-form form select {
     width: 100%;
-    margin-bottom: 1rem; /* Space between form elements */
+    margin-bottom: 1rem;
     padding: 0.8rem;
     font-size: 1rem;
     border-radius: 5px;
     border: 1px solid #ddd;
   }
 
-  /* Style for the submit button */
   .contact-form button {
     width: 100%;
     padding: 1rem;
@@ -278,8 +270,6 @@
     margin-bottom: 18%;
   }
 
-
-  /* Optional: Style for the footer's social links */
   .footer .SocialTxt a {
     display: inline-block;
     margin: 0.5rem;
@@ -289,78 +279,54 @@
   }
 
   .footer .SocialTxt a:hover {
-    color: #0073b1; /* Example hover color */
+    color: #0073b1;
   }
 
-  /* Remove line separator for mobile */
   .line {
     display: none;
   }
 
-  /* Ensure that the line between contact-info and contact-form is hidden on mobile */
-  .container3 .contact-info, 
+  .container3 .contact-info,
   .container3 .contact-form {
-    width: 100%; /* Force full-width layout */
+    width: 100%;
+    margin-top: 0%;
   }
 
   .phone-input .country-code {
-    flex: 0 0 30%; /* 30% width for the country code */
+    flex: 0 0 30%;
     padding: 0.8rem;
     font-size: 1rem;
     border-radius: 5px;
     border: 1px solid #ddd;
   }
 
-  .contact-info{
-    margin-top: 0%;
-  }
-}
-
-
-@media (max-width: 768px) {
-
-  .projects {
-    width: 90%; /* Increase width for better spacing */
-  }
-
-  .allcards {
-    width: 100%; /* Ensure cards container takes full width */
-    max-width: 100%;
-    gap: 15px; /* Reduce gap between cards */
-    flex-direction: column; /* Stack cards vertically */
-  }
-
   .initial {
-    flex-direction: column; /* Stack cards vertically */
-    align-items: center; /* Center cards */
-  }
-
-  .card {
-    width: 90%; /* Make each card take more space on small screens */
-    margin-bottom: 20px; /* Add some margin for spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .card-int__title {
-    font-size: 1.1rem; /* Slightly smaller title */
+    font-size: 1.1rem;
   }
 
   .card-int__button {
-    padding: 10px 25px; /* Smaller button padding */
-    font-size: 14px; /* Adjust font size */
+    padding: 10px 25px;
+    font-size: 14px;
   }
 
   .see-more-btn {
     margin-top: 20px;
     display: flex;
-    justify-content: center; /* Center the See More button */
+    justify-content: center;
   }
 
   .spn2 {
-    font-size: 16px; /* Adjust text size */
+    font-size: 16px;
   }
 }
 
-/* For Extra Small Devices (Mobile Portrait) */
+
 @media (max-width: 480px) {
 
   .projects {
@@ -390,43 +356,48 @@
   .see-more-btn button {
     padding: 10px 20px; /* Adjust button padding for smaller screens */
   }
-}
 
-/* Small Devices (Tablet Portrait Mode) */
-@media (max-width: 600px) {
   .projects {
-    width: 80%; /* Reduce the width for tablets */
-  }
-
-  .allcards {
-    gap: 15px; /* Reduce gap for tablet screens */
-    flex-direction: column; /* Stack the cards vertically */
+    padding: 10px;
   }
 
   .card {
-    width: 100%; /* Make cards full width */
-    margin-bottom: 15px; /* Margin between cards */
-  }
-
-  .card-int__title {
-    font-size: 1.1rem; /* Adjust title font size */
+    width: 100%;
+    margin: 0 auto 15px;
   }
 
   .card-int__button {
-    font-size: 14px; /* Adjust font size for buttons */
-  }
-
-  .see-more-btn {
-    margin-top: 20px;
+    padding: 8px 20px;
+    font-size: 13px;
   }
 
   .spn2 {
-    font-size: 18px; /* Adjust text size of the button */
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  .contact-form button {
+    margin-bottom: 20%;
   }
 }
 
-/* For large mobile screens (e.g., large iPhones) */
 @media (max-width: 992px) {
+  .projects {
+    width: 85%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .extra {
+    flex-direction: column;
+    align-items: center;
+  }
+
 
   .projects {
     width: 85%;
@@ -437,11 +408,10 @@
     gap: 15px;
     flex-direction: column;
     height: 100%;
+    width: 100%;
   }
 
-  .card {
-    width: 80%; /* Increase card width */
-  }
+
 
   .card-int__button {
     font-size: 14px; /* Adjust font size */
