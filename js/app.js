@@ -1,26 +1,22 @@
 (() => {
   // Toggle navigation menu and hamburger menu
-  const toggleNav = () => {
-    const nav = document.querySelector('.nav');
-    const hamburger = document.querySelector('.hamburger');
-    nav.classList.toggle('active');
-    hamburger.classList.toggle('active');
-  };
 
   // Close hamburger menu when a menu item is selected
   const setupNavLinks = () => {
-    const navLinks = document.querySelectorAll('.li');
-    navLinks.forEach(link => {
-      link.addEventListener('click', toggleNav);
+    const navLinks = document.querySelectorAll(".li");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", toggleNav);
     });
 
     const sections = {
-      'nav-projects': 'projects',
-      'nav-education': 'education'
+      "nav-projects": "projects",
+      "nav-education": "education",
     };
 
     for (const [navId, sectionId] of Object.entries(sections)) {
-      document.getElementById(navId).addEventListener('click', () => scrollToSection(sectionId));
+      document
+        .getElementById(navId)
+        .addEventListener("click", () => scrollToSection(sectionId));
     }
   };
 
@@ -29,7 +25,7 @@
     const section = document.getElementById(sectionId);
     if (section) {
       console.log(`Scrolling to section: ${sectionId}`);
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ behavior: "smooth" });
       triggerSectionAnimation(sectionId);
     } else {
       console.log(`Section not found: ${sectionId}`);
@@ -38,7 +34,7 @@
 
   // Typing animation for animated text
   const startTypingAnimation = () => {
-    const animatedText = document.getElementById('animatedText');
+    const animatedText = document.getElementById("animatedText");
     const textToType = "Full Stack Developer";
     const typingDuration = 3000;
     const typingSpeed = typingDuration / textToType.length;
@@ -54,7 +50,7 @@
         index++;
         setTimeout(typeNextCharacter, typingSpeed);
       } else {
-        animatedText.classList.add('blink-caret');
+        animatedText.classList.add("blink-caret");
       }
     };
 
@@ -62,34 +58,34 @@
   };
 
   const startAllAnimations = () => {
-    const nav = document.querySelector('.nav');
-    const indicator = document.querySelector('.indicator');
+    const nav = document.querySelector(".nav");
+    const indicator = document.querySelector(".indicator");
 
     setTimeout(() => {
-      nav.classList.add('fade-in');
-      nav.style.display = 'flex';
-      indicator.style.display = 'block';
+      nav.classList.add("fade-in");
+      nav.style.display = "flex";
+      indicator.style.display = "block";
     }, 4000);
   };
 
   const triggerSectionAnimation = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.classList.add('container-fade-in');
-      section.style.display = 'block';
+      section.classList.add("container-fade-in");
+      section.style.display = "block";
       checkScroll();
     }
   };
 
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     startAllAnimations();
     startTypingAnimation();
     setupNavLinks();
     populateCountryCodes();
 
-    const scrollTopBtn = document.getElementById('scrollTopBtn');
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   });
 
@@ -98,53 +94,58 @@
     return (
       rect.top >= 0 &&
       rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   };
 
   const checkScroll = () => {
-    const sections = document.querySelectorAll('.container-fade-in');
-    sections.forEach(section => {
+    const sections = document.querySelectorAll(".container-fade-in");
+    sections.forEach((section) => {
       if (isElementInViewport(section)) {
-        section.classList.add('container-visible');
+        section.classList.add("container-visible");
       }
     });
   };
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     checkScroll();
 
-    const scrollTopBtn = document.getElementById('scrollTopBtn');
-    const nav = document.querySelector('.nav');
-    const downloadCV = document.querySelector('.DownloadCV');
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    const nav = document.querySelector(".nav");
+    const downloadCV = document.querySelector(".DownloadCV");
 
     if (window.scrollY > 20) {
-      scrollTopBtn.style.display = 'block';
-      nav.style.display = 'none';
-      downloadCV.style.display = 'flex';
+      scrollTopBtn.style.display = "block";
+      nav.style.display = "none";
+      downloadCV.style.display = "flex";
     } else {
-      scrollTopBtn.style.display = 'none';
-      nav.style.display = 'flex';
-      downloadCV.style.display = 'none';
+      scrollTopBtn.style.display = "none";
+      nav.style.display = "flex";
+      downloadCV.style.display = "none";
     }
   });
 
   const populateCountryCodes = () => {
-    const countryCodeSelect = document.getElementById('countryCode');
+    const countryCodeSelect = document.getElementById("countryCode");
 
-    fetch('https://restcountries.com/v3.1/all')
-      .then(response => response.json())
-      .then(data => {
-        const sortedCountries = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
-        sortedCountries.forEach(country => {
-          const option = document.createElement('option');
-          option.value = `${country.idd.root}${country.idd.suffixes ? country.idd.suffixes[0] : ''}`;
+    fetch("https://restcountries.com/v3.1/all")
+      .then((response) => response.json())
+      .then((data) => {
+        const sortedCountries = data.sort((a, b) =>
+          a.name.common.localeCompare(b.name.common)
+        );
+        sortedCountries.forEach((country) => {
+          const option = document.createElement("option");
+          option.value = `${country.idd.root}${
+            country.idd.suffixes ? country.idd.suffixes[0] : ""
+          }`;
           option.textContent = `${country.flag} ${country.name.common} ${option.value}`;
           countryCodeSelect.appendChild(option);
         });
       })
-      .catch(error => console.error('Error fetching country codes:', error));
+      .catch((error) => console.error("Error fetching country codes:", error));
   };
 
   const filterCountryOptions = (event) => {
@@ -160,81 +161,37 @@
     });
   };
 
-  const allCards = document.querySelector('.cards-container');
-  const leftArrow = document.getElementById('left-arrow');
-  const rightArrow = document.getElementById('right-arrow');
 
-  // Update arrow visibility based on scroll position
-  function updateArrowVisibility() {
-    const scrollWidth = allCards.scrollWidth;
-    const clientWidth = allCards.clientWidth;
+  document
+  .getElementById("see-more-btn")
+  .addEventListener("click", function () {
+    const extraCards = document.querySelectorAll(".extra");
+    const projects = document.querySelector(".projects");
+    const spanElement = document.querySelector(".spn2");
 
-    leftArrow.style.display = allCards.scrollLeft > 0 ? 'block' : 'none';
-    rightArrow.style.display = scrollWidth > clientWidth && allCards.scrollLeft < scrollWidth - clientWidth ? 'block' : 'none';
-  }
 
-  rightArrow.addEventListener('click', () => {
-    allCards.scrollBy({ left: 300, behavior: 'smooth' });
-    updateArrowVisibility();
-  });
+    // Toggle display of extra cards
+    extraCards.forEach((card) => {
+      card.style.display = card.style.display === "flex" ? "none" : "flex";
+    });
 
-  leftArrow.addEventListener('click', () => {
-    allCards.scrollBy({ left: -300, behavior: 'smooth' });
-    updateArrowVisibility();
-  });
+    // Change the text inside the .spn2 span element
+    if (spanElement.textContent === "See More") {
+      spanElement.textContent = "See Less Projects"; // Update to "See Less"
+      
+      // Add margin-top to the .projects container when extra projects are shown
+      projects.style.marginTop = "10%";
+      projects.style.marginBottom = "10%";
+      projects.style.height = "100vh";
+    } else {
+      spanElement.textContent = "See More"; // Revert back to "See More"
+      
+      // Reset margin-top to its original value
+      projects.style.marginTop = "3%";
+      projects.style.height = "80vh";
 
-  // Swipe detection
-  let startX, isMoving = false;
-
-  allCards.addEventListener('touchstart', (event) => {
-    startX = event.touches[0].clientX;
-    isMoving = false; // Reset moving state
-  });
-
-  allCards.addEventListener('touchmove', (event) => {
-    const moveX = event.touches[0].clientX;
-    const diffX = startX - moveX;
-
-    // Only allow horizontal swipe
-    if (Math.abs(diffX) > 30) {
-      isMoving = true; // Set moving state
-      event.preventDefault(); // Prevent default scroll
-
-      if (diffX > 0) {
-        // Swiped left
-        rightArrow.click(); // Trigger right arrow click
-      } else {
-        // Swiped right
-        leftArrow.click(); // Trigger left arrow click
-      }
     }
   });
 
-  allCards.addEventListener('touchend', () => {
-    if (!isMoving) {
-      // If no movement, reset
-      startX = null;
-    }
-  });
 
-  let unavailable = document.querySelector('.live_demo_elephanta');
-  unavailable.addEventListener('click', ()=>{
-    alert("Live Demo Unavailale")
-  })
-
-  // updateArrowVisibility();
-  // window.addEventListener('resize', updateArrowVisibility);
-
-  // // Prevent scrolling for the first 4 seconds
-  // function preventScroll() {
-  //   window.scrollTo(0, 0);
-  // }
-
-  // // Add event listener to prevent scrolling
-  // window.addEventListener('scroll', preventScroll);
-
-  // // Allow scrolling after 4 seconds
-  // setTimeout(() => {
-  //   window.removeEventListener('scroll', preventScroll);
-  // }, 4000);
 })();

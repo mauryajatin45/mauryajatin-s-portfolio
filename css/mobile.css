@@ -315,3 +315,143 @@
     margin-top: 0%;
   }
 }
+
+
+@media (max-width: 768px) {
+
+  .projects {
+    width: 90%; /* Increase width for better spacing */
+  }
+
+  .allcards {
+    width: 100%; /* Ensure cards container takes full width */
+    max-width: 100%;
+    gap: 15px; /* Reduce gap between cards */
+    flex-direction: column; /* Stack cards vertically */
+  }
+
+  .initial {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards */
+  }
+
+  .card {
+    width: 90%; /* Make each card take more space on small screens */
+    margin-bottom: 20px; /* Add some margin for spacing */
+  }
+
+  .card-int__title {
+    font-size: 1.1rem; /* Slightly smaller title */
+  }
+
+  .card-int__button {
+    padding: 10px 25px; /* Smaller button padding */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .see-more-btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the See More button */
+  }
+
+  .spn2 {
+    font-size: 16px; /* Adjust text size */
+  }
+}
+
+/* For Extra Small Devices (Mobile Portrait) */
+@media (max-width: 480px) {
+
+  .projects {
+    width: 100%; /* Full width for extra small screens */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .allcards {
+    gap: 10px; /* Even smaller gap between cards */
+    flex-direction: column; /* Stack cards vertically */
+  }
+
+  .card {
+    width: 100%; /* Cards should take full width */
+    margin-bottom: 15px; /* Reduce margin between cards */
+  }
+
+  .card-int__button {
+    padding: 8px 20px; /* Adjust button size */
+    font-size: 13px; /* Adjust button text size */
+  }
+
+  .card-int__title {
+    font-size: 1rem; /* Reduce title font size */
+  }
+
+  .see-more-btn button {
+    padding: 10px 20px; /* Adjust button padding for smaller screens */
+  }
+}
+
+/* Small Devices (Tablet Portrait Mode) */
+@media (max-width: 600px) {
+  .projects {
+    width: 80%; /* Reduce the width for tablets */
+  }
+
+  .allcards {
+    gap: 15px; /* Reduce gap for tablet screens */
+    flex-direction: column; /* Stack the cards vertically */
+  }
+
+  .card {
+    width: 100%; /* Make cards full width */
+    margin-bottom: 15px; /* Margin between cards */
+  }
+
+  .card-int__title {
+    font-size: 1.1rem; /* Adjust title font size */
+  }
+
+  .card-int__button {
+    font-size: 14px; /* Adjust font size for buttons */
+  }
+
+  .see-more-btn {
+    margin-top: 20px;
+  }
+
+  .spn2 {
+    font-size: 18px; /* Adjust text size of the button */
+  }
+}
+
+/* For large mobile screens (e.g., large iPhones) */
+@media (max-width: 992px) {
+
+  .projects {
+    width: 85%;
+    height: 100%;
+  }
+
+  .allcards {
+    gap: 15px;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .card {
+    width: 80%; /* Increase card width */
+  }
+
+  .card-int__button {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .see-more-btn button {
+    padding: 12px 24px; /* Increase padding for the button */
+  }
+  .extra{
+    flex-direction: column;
+    align-items: center;
+  }
+}
