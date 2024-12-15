@@ -3,8 +3,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -1195,4 +1193,8 @@ button {
   text-decoration: none;
   border: none;
   background-color: transparent;
+}
+
+select{
+  cursor: pointer;
 }
