@@ -324,10 +324,47 @@
   .spn2 {
     font-size: 16px;
   }
+
+  .upwardSkills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between the items */
+  }
+  
+  .Skills1, .Skills2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 45%; /* Adjust width to 45% for a balanced layout */
+    gap: 15px; /* Space between skill boxes */
+    margin: 0 auto;
+  }
+
+
+
 }
 
 
 @media (max-width: 480px) {
+
+  .upwardSkills{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  
+  .Skills1, .Skills2{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 90%;
+    gap: 0;
+    margin-top: 3%;
+  }
 
   .projects {
     width: 100%; /* Full width for extra small screens */
@@ -389,9 +426,6 @@
     width: 85%;
   }
 
-  .card {
-    width: 100%;
-  }
 
   .extra {
     flex-direction: column;

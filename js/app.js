@@ -136,42 +136,85 @@
       })
       .catch((error) => console.error("Error fetching country codes:", error));
   };
+  
+/// Function to fetch projects data from a JSON file
+async function fetchProjects() {
+  try {
+    const response = await fetch('./project.json'); // Update the path to your JSON file
+    const projects = await response.json();
+    return projects;
+  } catch (error) {
+    console.error('Error fetching projects data:', error);
+    return [];
+  }
+}
 
-  // Toggles the visibility of additional projects
-  const setupProjectToggle = () => {
-    const seeMoreBtn = document.getElementById("see-more-btn");
-  
-    if (seeMoreBtn) {
-      seeMoreBtn.addEventListener("click", () => {
-        const extraCards = document.querySelectorAll(".extra");
-        const spanElement = document.querySelector(".spn2");
-        const projects = document.querySelector(".projects");
-  
-        const isExpanded = spanElement.textContent === "See Less Projects";
-  
-        // Toggle visibility of extra cards
-        extraCards.forEach((card) => {
-          card.style.display = isExpanded ? "none" : "flex";
-        });
-  
-        // Update button text
-        spanElement.textContent = isExpanded ? "See More" : "See Less Projects";
-  
-        // Apply styles only for desktop view
-        if (window.innerWidth > 768) {
-          projects.style.marginTop = isExpanded ? "3%" : "10%";
-          projects.style.marginBottom = isExpanded ? "0" : "10%";
-          projects.style.height = isExpanded ? "80vh" : "100vh";
-        } else {
-          // Reset styles for mobile view
-          projects.style.marginTop = "";
-          projects.style.marginBottom = "";
-          projects.style.height = "";
-        }
-      });
+// Function to render cards dynamically
+function renderCards(projects, category) {
+  const container = document.getElementById("cards-container");
+  container.innerHTML = ""; // Clear existing cards
+
+  // Filter projects based on the category
+  const filteredProjects = projects.filter(project => project.category === category);
+
+  // Create and append cards
+  filteredProjects.forEach(project => {
+    const card = document.createElement("div");
+    card.className = `card BuildWith${project.category}`;
+
+    card.innerHTML = `
+      <div class="card__corner"></div>
+      <div class="card__img">
+        <img loading="lazy" src="${project.image}" alt="${project.altText}" class="projectimg">
+        <span class="card__span">${project.category}</span>
+      </div>
+      <div class="card-int">
+        <p class="card-int__title">${project.title}</p>
+        <p class="excerpt">${project.description}</p>
+        <div class="button_setter">
+          <a href="${project.links.liveDemo}" target="_blank">
+            <button class="card-int__button card-int__button_live_demo">Live Demo</button>
+          </a>
+          <a href="${project.links.github}" target="_blank">
+            <button class="card-int__button">Github</button>
+          </a>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+// Function to highlight the active tab
+function highlightActiveTab(category) {
+  document.querySelectorAll(".sorterDiv > div").forEach(tab => {
+    if (tab.getAttribute("data-category") === category) {
+      tab.classList.add("active");
+    } else {
+      tab.classList.remove("active");
     }
-  };
-  
+  });
+}
+
+// Event listener for sorting
+function setupSortButtons(projects) {
+  document.querySelectorAll(".sorterDiv > div").forEach(sorter => {
+    sorter.addEventListener("click", () => {
+      const category = sorter.getAttribute("data-category");
+      renderCards(projects, category);
+      highlightActiveTab(category); // Highlight the active tab
+    });
+  });
+}
+
+// Initialize the projects section
+async function initProjects() {
+  const projects = await fetchProjects(); // Fetch data from JSON file
+  const defaultCategory = "JavaScript"; // Default category
+  renderCards(projects, defaultCategory); // Initial render with default category
+  highlightActiveTab(defaultCategory); // Highlight the default active tab
+  setupSortButtons(projects); // Setup sorting functionality
+}
 
   // Initialization
   document.addEventListener("DOMContentLoaded", () => {
@@ -180,6 +223,7 @@
     setupScrollBehavior();
     startAllAnimations();
     populateCountryCodes();
-    setupProjectToggle();
+    // setupProjectToggle();
+    initProjects();
   });
 })();

@@ -14,6 +14,12 @@
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/scrollbar.css" />
   <link rel="stylesheet" href="./css/mobile.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jatin Maurya - Full Stack Web Developer & Enthusiast">
+  <meta property="og:description" content="Discover Jatin's portfolio, highlighting his expertise in web development and UI/UX design using HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB.">
+  <meta property="og:url" content="https://jatin-maurya-portfolio.netlify.app/">
+  <meta property="og:type" content="website">
 </head>
 
 
@@ -77,8 +83,10 @@
 
   </div>
   <div class="Skills">
-    <h1 class="container-fade-in">Techinical Skills</h1>
-    <div class="Skills1 commonskill container-fade-in">
+
+    <h1 class="container-fade-in">Technical Skills</h1>
+    <div class="upwardSkills">
+      <div class="Skills1 commonskill container-fade-in">
       <h2 id="skill1h1">Languages</h2>
       <div class="skillsectionimage">
         <div class="skill-box">
@@ -111,8 +119,48 @@
         </div>
       </div>
     </div>
+    <div class="Skills2 commonskill container-fade-in">
+      <h2>Frameworks & Libraries</h2>
+      <div class="skillsectionimage">
+        <div class="skill-box">
+          <img loading="lazy" src="./images/Bootstrap.png" alt="Bootstrap" class="skillimg">
+          <p class="skill-name">Bootstrap</p>
+        </div>
+        <div class="skill-box">
+          <img loading="lazy" src="./images/Tailwind.png" alt="Tailwind" class="skillimg">
+          <p class="skill-name">Tailwind</p>
+        </div>
+        <div class="skill-box">
+          <img loading="lazy" src="./images/Flutter.png" alt="Flutter" class="skillimg">
+          <p class="skill-name">Flutter</p>
+        </div>
+        <div class="skill-box">
+          <img loading="lazy" src="./images/React.png" alt="React" class="skillimg">
+          <p class="skill-name">React</p>
+        </div>
+        <div class="skill-box">
+          <img loading="lazy" src="./images/nodejs.png" alt="Node.js" class="skillimg">
+          <p class="skill-name">Node.js</p>
+        </div>
+        <div class="skill-box">
+          <img loading="lazy" src="./images/expressjs.png" alt="Express" class="skillimg">
+          <p class="skill-name">Express</p>
+        </div>
+        <div class="skill-box">
+          <img loading="lazy" src="./images/Mongo_DB.png" alt="MongoDB" class="skillimg">
+          <p class="skill-name">MongoDB</p>
+        </div>
+        <div class="skill-box">
+          <img loading="lazy" src="./images/ejs.svg" alt="EJS" class="skillimg">
+          <p class="skill-name">EJS</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Developer Tools Section -->
     <div class="downwardskills">
-      <div class="Skills2 commonskill container-fade-in">
+      <div class="Skills3 commonskill container-fade-in">
         <h2>Developer Tools</h2>
         <div class="skillsectionimage">
           <div class="skill-box">
@@ -120,8 +168,7 @@
             <p class="skill-name">Git</p>
           </div>
           <div class="skill-box">
-            <img loading="lazy" src="./images/317712_code repository_github_repository_resource_icon.png" alt="Github"
-              class="skillimg">
+            <img loading="lazy" src="./images/317712_code repository_github_repository_resource_icon.png" alt="GitHub" class="skillimg">
             <p class="skill-name">GitHub</p>
           </div>
           <div class="skill-box">
@@ -133,26 +180,10 @@
             <p class="skill-name">Windows</p>
           </div>
         </div>
-      </div>
-      <div class="Skills3 commonskill container-fade-in">
-        <h2>Frameworks & Libraries</h2>
-        <div class="skillsectionimage">
-          <div class="skill-box">
-            <img loading="lazy" src="./images/Bootstrap.png" alt="Bootstrap" class="skillimg">
-            <p class="skill-name">Bootstrap</p>
-          </div>
-          <div class="skill-box">
-            <img loading="lazy" src="./images/Tailwind.png" alt="Tailwind" class="skillimg">
-            <p class="skill-name">Tailwind</p>
-          </div>
-          <div class="skill-box">
-            <img loading="lazy" src="./images/Flutter.png" alt="Flutter" class="skillimg">
-            <p class="skill-name">Flutter</p>
-          </div>
-        </div>
-      </div>
+      </div>     
     </div>
   </div>
+  
   <!-- //next to home page -->
   <div class="container2">
     <div class="aboutme" id="aboutme">
@@ -181,130 +212,18 @@
     </div>
     <div class="projects" id="projects">
       <h1 class="navtxtprop container-fade-in">Projects</h1>
+      <div class="sorterDiv container-fade-in">
+        <div class="sorter" data-category="JavaScript">JavaScript</div>
+        <div class="sorter" data-category="React">React</div>
+        <div class="sorter" data-category="Full Stack">Full Stack</div>
+      </div>
       <div class="allcards">
-        <div class="cards-container container-fade-in">
-
-          <div class="initial">
-            <div class="card">
-              <div class="card__corner"></div>
-              <div class="card__img">
-                <img loading="lazy" src="./images/Projects/Portfolio.png" alt="Portfolio" class="projectimg">
-                <span class="card__span">Frontend</span>
-              </div>
-              <div class="card-int">
-                <p class="card-int__title">Personal Portfolio</p>
-                <p class="excerpt">I created a personal portfolio website to showcase my skills and projects. This
-                  involved designing a responsive layout with HTML, CSS, and JavaScript, jQuery, and backend with PHP
-                  highlighting my web development expertise.</p>
-                  <div class="button_setter">
-                    <a href="https://jatin-maurya-portfolio.netlify.app/" target="_blank">
-                      <button class="card-int__button card-int__button_live_demo">Live Demo</button>
-                    </a>
-                  <a href="https://github.com/mauryajatin45/mauryajatin-s-portfolio" target="_blank">
-                    <button class="card-int__button">Github</button>
-                  </a>
-                  </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card__corner"></div>
-              <div class="card__img">
-                <img loading="lazy" src="./images/Typing_speed_tester.png" alt="Typing speed tester" class="projectimg">
-                <span class="card__span">Frontend</span>
-              </div>
-              <div class="card-int">
-                <p class="card-int__title">Typing Speed Tester</p>
-                <p class="excerpt">Challenge your typing skills with our Typing Speed Tester! Race against the clock on a
-                  timed passage and get instant feedback on your words per minute (WPM), errors, and accuracy. Perfect for
-                  practice or fun—start typing and see your speed improve!</p>
-                  <div class="button_setter">
-                    <a href="https://jatin-typing-speed-tester.netlify.app/" target="_blank">
-                      <button class="card-int__button card-int__button_live_demo">Live Demo</button>
-                    </a>
-                  <a href="https://github.com/mauryajatin45/Delta-Practise/tree/main/JS/projects/typing%20speed%20checker"
-                    target="_blank">
-                    <button class="card-int__button">Github</button>
-                  </a>
-                  </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card__corner"></div>
-              <div class="card__img">
-                <img loading="lazy" src="./images/New_Logo.png" alt="Elephanta Quiz" class="projectimg Elephantaimg">
-                <span class="card__span">Full Stack</span>
-              </div>
-              <div class="card-int">
-                <p class="card-int__title">Elephanta Quiz</p>
-                <p class="excerpt">Elephanta Quiz is a user-friendly platform for creating, sharing, and participating in
-                  quizzes. It offers a responsive design and personalized user management, making quiz-taking easy and
-                  engaging across all devices.</p>
-                <div class="button_setter">
-                  <a href="" target="">
-                    <button class="card-int__button card-int__button_live_demo live_demo_elephanta">Live Demo</button>
-                  </a>
-                <a href="https://github.com/mauryajatin45/Mini-Project-Elephanta-Quiz" target="_blank">
-                  <button class="card-int__button">Github</button>
-                </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="extra">
-            <div class="card">
-              <div class="card__corner"></div>
-              <div class="card__img">
-                <img loading="lazy" src="./images/Stock Market Images.png" alt="Stock Transaction Saver" class="projectimg">
-                <span class="card__span">Frontend</span>
-              </div>
-              <div class="card-int">
-                <p class="card-int__title">Stock Transaction Saver</p>
-                <p class="excerpt">Project works as a transaction book for stock market trades. Users can record
-                  transactions, track holdings, and monitor profits and losses, all through an intuitive interface that
-                  simplifies data entry and enhances investment management.</p>
-                  <div class="button_setter">
-                    <a href="https://stock-transaction-saver.netlify.app/" target="_blank">
-                      <button class="card-int__button card-int__button_live_demo">Live Demo</button>
-                    </a>
-                  <a href="https://github.com/mauryajatin45/Delta-Practise/tree/main/JS/projects/Stock%20Market"
-                    target="_blank">
-                    <button class="card-int__button">Github</button>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card__corner"></div>
-              <div class="card__img">
-                <img loading="lazy" src="./images/VLC.png" alt="VLC media Player" class="projectimg">
-                <span class="card__span">Frontend</span>
-              </div>
-              <div class="card-int">
-                <p class="card-int__title">VLC web media Player</p>
-                <p class="excerpt">VLC Media Player Web Clone is a simple but feature-rich video player inspired by VLC Media Player. It offers a smooth, easy-to-use interface for video playback within the browser, with support for the most common video controls.</p>
-                  <div class="button_setter">
-                    <a href="https://vlc-web-media-player.netlify.app/" target="_blank">
-                      <button class="card-int__button card-int__button_live_demo">Live Demo</button>
-                    </a>
-                  <a href="https://github.com/mauryajatin45/VLC.git"
-                    target="_blank">
-                    <button class="card-int__button">Github</button>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-
+        <div class="cards-container container-fade-in" id="cards-container">
+          <!-- Dynamic cards will be loaded here -->
         </div>
       </div>
-      <div class="see-more-btn" id="see-more-btn">
-        <button>
-          <span class="btn2"><span class="spn2">See More &#8675;</span></span>
-        </button>
-      </div>
     </div>
-
+    
     <div class="Work" id="experiences">
       <h1 class="navtxtprop container-fade-in">Experiences</h1>
       <div class="allwork">

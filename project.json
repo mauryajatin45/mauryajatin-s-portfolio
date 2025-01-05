@@ -1,0 +1,80 @@
+[
+    {
+      "title": "Personal Portfolio",
+      "image": "./images/Projects/Portfolio.png",
+      "altText": "Portfolio",
+      "category": "JavaScript",
+      "description": "I created a personal portfolio website to showcase my skills and projects. This involved designing a responsive layout with HTML, CSS, and JavaScript, jQuery, and backend with PHP highlighting my web development expertise.",
+      "links": {
+        "liveDemo": "https://jatin-maurya-portfolio.netlify.app/",
+        "github": "https://github.com/mauryajatin45/mauryajatin-s-portfolio"
+      }
+    },
+    {
+      "title": "Typing Speed Tester",
+      "image": "./images/Typing_speed_tester.png",
+      "altText": "Typing speed tester",
+      "category": "JavaScript",
+      "description": "Challenge your typing skills with our Typing Speed Tester! Race against the clock on a timed passage and get instant feedback on your words per minute (WPM), errors, and accuracy. Perfect for practice or fun—start typing and see your speed improve!",
+      "links": {
+        "liveDemo": "https://jatin-typing-speed-tester.netlify.app/",
+        "github": "https://github.com/mauryajatin45/Delta-Practise/tree/main/JS/projects/typing%20speed%20checker"
+      }
+    },
+    {
+      "title": "Elephanta Quiz",
+      "image": "./images/New_Logo.png",
+      "altText": "Elephanta Quiz",
+      "category": "Full Stack",
+      "description": "Elephanta Quiz is a user-friendly platform for creating, sharing, and participating in quizzes. It offers a responsive design and personalized user management, making quiz-taking easy and engaging across all devices.",
+      "links": {
+        "liveDemo": "",
+        "github": "https://github.com/mauryajatin45/Mini-Project-Elephanta-Quiz"
+      }
+    },
+    {
+      "title": "Stock Transaction Saver",
+      "image": "./images/Stock Market Images.png",
+      "altText": "Stock Transaction Saver",
+      "category": "JavaScript",
+      "description": "Project works as a transaction book for stock market trades. Users can record transactions, track holdings, and monitor profits and losses, all through an intuitive interface that simplifies data entry and enhances investment management.",
+      "links": {
+        "liveDemo": "https://stock-transaction-saver.netlify.app/",
+        "github": "https://github.com/mauryajatin45/Delta-Practise/tree/main/JS/projects/Stock%20Market"
+      }
+    },
+    {
+      "title": "VLC web media Player",
+      "image": "./images/VLC.png",
+      "altText": "VLC media Player",
+      "category": "JavaScript",
+      "description": "VLC Media Player Web Clone is a simple but feature-rich video player inspired by VLC Media Player. It offers a smooth, easy-to-use interface for video playback within the browser, with support for the most common video controls.",
+      "links": {
+        "liveDemo": "https://vlc-web-media-player.netlify.app/",
+        "github": "https://github.com/mauryajatin45/VLC.git"
+      }
+    },
+    {
+      "title": "Weather App",
+      "image": "./images/Projects/Weather.png",
+      "altText": "Weather App",
+      "category": "React",
+      "description": "A simple React-based weather app that allows users to search for locations and view current, hourly, and weekly weather data. It integrates the Tomorrow.io API for weather forecasts and the Open Meteo API for geocoding locations.",
+      "links": {
+        "liveDemo": "https://weather-five-lake-64.vercel.app/",
+        "github": "https://github.com/mauryajatin45/Weather.git"
+      }
+    },
+    {
+      "title": "Lottery Game",
+      "image": "./images/Projects/Lottery.png",
+      "altText": "Lottery Game",
+      "category": "React",
+      "description": "A fun and interactive lottery game built with React. Users can select numbers, generate random lottery numbers, and compare their picks to the winning numbers. The game provides instant feedback on matches.",
+      "links": {
+        "liveDemo": "https://lottery-game-tawny.vercel.app/",
+        "github": "https://github.com/mauryajatin45/LotteryGame.git"
+      }
+    }
+  ]
+  
