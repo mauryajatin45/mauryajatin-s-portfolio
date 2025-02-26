@@ -33,6 +33,17 @@
       }
     },
     {
+      "title": "AirBnb Clone",
+      "image": "./images/AirBnb.png",
+      "altText": "AirBnb Logo",
+      "category": "Full Stack",
+      "description": "This project aims to recreate a simplified version of Airbnb's key features, allowing users to browse listings, view details. The backend is built with a RESTful API architecture, while the front-end leverages modern web technologies.",
+      "links": {
+        "liveDemo": "https://airbnb-zw9c.onrender.com/",
+        "github": "https://github.com/mauryajatin45/Airbnb"
+      }
+    },
+    {
       "title": "Stock Transaction Saver",
       "image": "./images/Stock Market Images.png",
       "altText": "Stock Transaction Saver",
