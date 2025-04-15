@@ -44,6 +44,17 @@
       }
     },
     {
+      "title": "Career Craft",
+      "image": "./images/CareerCraft.png",
+      "altText": "Career Craft Thumbnail",
+      "category": "Full Stack",
+      "description": "Developed during a hackathon at DAIICT, this AI-powered platform offers personalized career guidance. It helps users explore career options, discover skill-building resources, and gain industry insights, empowering them to make career decisions.",
+      "links": {
+        "liveDemo": "https://careercraft-3u21.onrender.com/",
+        "github": "https://github.com/mauryajatin45/CareerCraft"
+      }
+    },
+    {
       "title": "Stock Transaction Saver",
       "image": "./images/Stock Market Images.png",
       "altText": "Stock Transaction Saver",
