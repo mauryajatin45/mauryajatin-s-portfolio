@@ -22,7 +22,7 @@ app.use('/project/bhaichat', createProxyMiddleware({
 }));
 
 // Catch-all route to handle any non-proxy requests (like your homepage, etc.)
-app.get('*', (req, res) => {
+app.get('', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));  // Default HTML file to serve
 });
 
