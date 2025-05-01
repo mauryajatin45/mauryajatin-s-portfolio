@@ -1,32 +1,35 @@
 const express = require('express');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 const path = require('path');
-const { createProxyMiddleware } = require('http-proxy-middleware'); // Import proxy middleware
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Serve static files
+// 1) Your main app’s static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Proxy for "/project/bhaichat"
-app.use('/project/bhaichat', createProxyMiddleware({
-    target: 'https://bhaichat.vercel.app',  // The URL to forward to
-    changeOrigin: true,  // Allow cross-origin requests
+// 2) One proxy rule for TypingTest (HTML + all its assets)
+app.use(
+  '/project/TypingTest',
+  createProxyMiddleware({
+    target: 'https://jatin-typing-speed-tester.netlify.app',
+    changeOrigin: true,
+    secure: true,
     pathRewrite: {
-        '^/project/bhaichat': '/login',  // Route "/project/bhaichat" to "/login" on target
+      '^/project/TypingTest': '',   // /project/TypingTest/foo → /foo on Netlify
     },
-    onProxyRes: (proxyRes, req, res) => {
-        // You can modify the response headers if needed
-        proxyRes.headers['X-Forwarded-For'] = req.connection.remoteAddress;
-    }
-}));
+    onProxyRes(proxyRes) {
+      // optional tagging
+      proxyRes.headers['X-Proxy-By'] = 'mauryajatin.me';
+    },
+  })
+);
 
-// Catch-all route to handle any non-proxy requests (like your homepage, etc.)
+// 3) Fallback for everything else in your full-stack app
 app.get('', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));  // Default HTML file to serve
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Start the server
-app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
-});
+app.listen(port, () =>
+  console.log(`Server running on http://localhost:${port}`)
+);

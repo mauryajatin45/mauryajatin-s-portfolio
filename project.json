@@ -6,7 +6,7 @@
       "category": "JavaScript",
       "description": "I created a personal portfolio website to showcase my skills and projects. This involved designing a responsive layout with HTML, CSS, and JavaScript, jQuery, and backend with PHP highlighting my web development expertise.",
       "links": {
-        "liveDemo": "https://jatin-maurya-portfolio.netlify.app/",
+        "liveDemo": "www.mauryajatin.me",
         "github": "https://github.com/mauryajatin45/mauryajatin-s-portfolio"
       }
     },
@@ -17,7 +17,7 @@
       "category": "JavaScript",
       "description": "Challenge your typing skills with our Typing Speed Tester! Race against the clock on a timed passage and get instant feedback on your words per minute (WPM), errors, and accuracy. Perfect for practice or fun—start typing and see your speed improve!",
       "links": {
-        "liveDemo": "https://jatin-typing-speed-tester.netlify.app/",
+        "liveDemo": "www.mauryajatin.me/project/TypingTest/",
         "github": "https://github.com/mauryajatin45/Delta-Practise/tree/main/JS/projects/typing%20speed%20checker"
       }
     },
