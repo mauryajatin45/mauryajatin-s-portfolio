@@ -1,0 +1,16 @@
+{
+  "name": "mauryajatin-s-portfolio",
+  "version": "1.0.0",
+  "description": "Welcome to the official portfolio website repository of **Jatin Maurya**, a passionate **web developer** and **technology enthusiast**. This portfolio showcases the work, projects, technical skills, and experience that define Jatin's journey in the world of web development.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.5"
+  }
+}
