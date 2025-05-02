@@ -5,31 +5,46 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// 1) Your main app’s static files
-app.use(express.static(path.join(__dirname, 'public')));
-
-// 2) One proxy rule for TypingTest (HTML + all its assets)
+// 1) Proxy for your TypingTest project
 app.use(
   '/project/TypingTest',
   createProxyMiddleware({
     target: 'https://jatin-typing-speed-tester.netlify.app',
     changeOrigin: true,
     secure: true,
+    pathRewrite: { '^/project/TypingTest': '' },
+  })
+);
+
+// 2) Proxy for your VLC project
+app.use(
+  '/project/vlc',
+  createProxyMiddleware({
+    target: 'https://vlc-web-media-player.netlify.app',
+    changeOrigin: true,
+    secure: true,
+    pathRewrite: { '^/project/vlc': '' },
+  })
+);
+
+app.use(
+  '/project/react/weather',
+  createProxyMiddleware({
+    target: 'https://weather-five-lake-64.vercel.app',
+    changeOrigin: true,
     pathRewrite: {
-      '^/project/TypingTest': '',   // /project/TypingTest/foo → /foo on Netlify
-    },
-    onProxyRes(proxyRes) {
-      // optional tagging
-      proxyRes.headers['X-Proxy-By'] = 'mauryajatin.me';
+      '^/project/react/weather': '',
     },
   })
 );
 
-// 3) Fallback for everything else in your full-stack app
-app.get('', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
 
-app.listen(port, () =>
-  console.log(`Server running on http://localhost:${port}`)
-);
+// 3) Serve your own static files (including index.html at '/')
+app.use(express.static(path.join(__dirname, 'public')));
+
+// No app.get('*') needed—Express.static will serve index.html at '/', and
+// your two proxies will catch anything under /project/TypingTest/* and /project/vlc/*.
+
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
+});
