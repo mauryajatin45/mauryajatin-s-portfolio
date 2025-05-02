@@ -25,8 +25,8 @@ The website includes key sections such as:
 - **Scroll Animations**: Smooth animations for section transitions as the user scrolls.
 - **Contact Form**: User-friendly form with input validation and PHP email submission.
 - **Country Code Dropdown**: A dynamic dropdown list populated with country flags and phone codes from an external API.
-- **Mobile Swipe Navigation**: Swipeable cards container for horizontal scrolling of portfolio items on mobile devices.
-- **Scroll-to-Top Button**: A button that appears on scroll, allowing users to easily navigate back to the top of the page.
+- **Mobile Swipe Navigation**: Swipeable card containers are used for horizontal scrolling of portfolio items on mobile devices.
+- **Scroll-to-Top Button**: A button that appears on scroll, allowing users to navigate back to the top of the page easily.
 
 ## Getting Started
 
@@ -39,4 +39,4 @@ Before running this project, ensure you have:
 
 ### Head to PortFolio
 1. Live Demo
-  https://jatin-maurya-portfolio.netlify.app/
+  https://www.mauryajatin.me/
