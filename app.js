@@ -30,7 +30,7 @@ app.use(
 app.use(
   '/project/react/weather',
   createProxyMiddleware({
-    target: 'https://weather-five-lake-64.vercel.app',
+    target: 'https://jatinreactweather.netlify.app/',
     changeOrigin: true,
     pathRewrite: {
       '^/project/react/weather': '',

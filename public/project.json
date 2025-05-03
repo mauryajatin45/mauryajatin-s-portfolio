@@ -84,7 +84,7 @@
       "description": "A simple React-based weather app that allows users to search for locations and view current, hourly, and weekly weather data. It integrates the Tomorrow.io API for weather forecasts and the Open Meteo API for geocoding locations.",
       "links": {
         "liveDemo": "/project/react/weather",
-        "github": "https://github.com/mauryajatin45/Weather.git"
+        "github": "https://github.com/mauryajatin45/ReactWeatherApp.git"
       }
     },
     {
