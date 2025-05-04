@@ -94,7 +94,7 @@
       "category": "React",
       "description": "A fun and interactive lottery game built with React. Users can select numbers, generate random lottery numbers, and compare their picks to the winning numbers. The game provides instant feedback on matches.",
       "links": {
-        "liveDemo": "https://lottery-game-tawny.vercel.app/",
+        "liveDemo": "/project/react/lotteryGame",
         "github": "https://github.com/mauryajatin45/LotteryGame.git"
       }
     }

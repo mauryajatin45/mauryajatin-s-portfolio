@@ -38,6 +38,17 @@ app.use(
   })
 );
 
+app.use(
+  '/project/react/lotteryGame',
+  createProxyMiddleware({
+    target: 'https://lottery-game-tawny.vercel.app/',
+    changeOrigin: true,
+    pathRewrite: {
+      '^/project/react/lotteryGame': '',
+    },
+  })
+);
+
 
 // 3) Serve your own static files (including index.html at '/')
 app.use(express.static(path.join(__dirname, 'public')));
