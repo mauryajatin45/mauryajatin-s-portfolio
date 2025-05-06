@@ -154,5 +154,9 @@
   "Wordpress": {
     "value": "images\\Wordpress.jpg",
     "description": "Certificate for completing a WordPress development course."
+  },
+  "Tic-Tech-Toe[Hackathon-DAIICT]": {
+    "value": "images\\Tic-Tech-Toe[Hackathon-DAIICT].png",
+    "description": "Certificate for participating in Hackathon conducted by IEEE Student club at DAIICT"
   }
 }
