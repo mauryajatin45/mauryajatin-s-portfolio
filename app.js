@@ -49,6 +49,17 @@ app.use(
   })
 );
 
+app.use(
+  '/project/react/Calculator',
+  createProxyMiddleware({
+    target: 'https://jatin-calc.netlify.app/',
+    changeOrigin: true,
+    pathRewrite: {
+      '^/project/react/Calculator/': '',
+    },
+  })
+);
+
 
 // 3) Serve your own static files (including index.html at '/')
 app.use(express.static(path.join(__dirname, 'public')));
