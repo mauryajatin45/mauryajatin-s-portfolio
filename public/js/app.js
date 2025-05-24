@@ -227,3 +227,34 @@ async function initProjects() {
     initProjects();
   });
 })();
+
+async function loadTopPosts() {
+  try {
+    const res = await fetch('https://blogbackend-ecru.vercel.app/api/posts/top3');
+    const { posts } = await res.json();
+
+    const container = document.getElementById('blogs-container');
+    container.innerHTML = ''; // clear placeholder
+
+    posts.forEach(post => {
+      const card = document.createElement('article');
+      card.className = 'blog-card';
+      card.innerHTML = `
+        <img src="${post.imageUrl || '/images/default-blog.jpg'}" alt="${post.title}" class="blog-img">
+        <div class="blog-content">
+          <h2 class="blog-title">${post.title}</h2>
+          <p class="blog-excerpt">${post.excerpt}</p>
+          </div>
+          `;
+          container.appendChild(card);
+        });
+      } catch (err) {
+        console.error('Failed to load top posts:', err);
+      }
+    }
+    
+//<a href="https://blog.mauryajatin.me/posts/${post.id}" class="btn2" target="_blank"><span>Read More</span></a>
+
+
+// call it once DOM is loaded
+document.addEventListener('DOMContentLoaded', loadTopPosts);

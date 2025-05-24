@@ -32,6 +32,7 @@ app.use(
   createProxyMiddleware({
     target: 'https://jatinreactweather.netlify.app/',
     changeOrigin: true,
+    secure: true,
     pathRewrite: {
       '^/project/react/weather': '',
     },
@@ -43,6 +44,7 @@ app.use(
   createProxyMiddleware({
     target: 'https://lottery-game-tawny.vercel.app/',
     changeOrigin: true,
+        secure: true,
     pathRewrite: {
       '^/project/react/lotteryGame': '',
     },
@@ -54,18 +56,25 @@ app.use(
   createProxyMiddleware({
     target: 'https://jatin-calc.netlify.app/',
     changeOrigin: true,
+        secure: true,
     pathRewrite: {
-      '^/project/react/Calculator/': '',
+      '^/project/react/Calculator': '',
     },
   })
 );
 
 
-// 3) Serve your own static files (including index.html at '/')
+// after your static + proxy middleware:
 app.use(express.static(path.join(__dirname, 'public')));
 
-// No app.get('*') needed—Express.static will serve index.html at '/', and
-// your two proxies will catch anything under /project/TypingTest/* and /project/vlc/*.
+// serve index.html for any non-API, non-project path
+app.get(
+  /^(?!\/(?:api|project)).*$/, 
+  (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  }
+);
+
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
