@@ -50,7 +50,7 @@
     "category": "Full Stack",
     "description": "Developed during a hackathon at DAIICT, this AI-powered platform offers personalized career guidance. It helps users explore career options, discover skill-building resources, and gain industry insights, empowering them to make career decisions.",
     "links": {
-      "liveDemo": "https://careercraft-3u21.onrender.com/",
+      "liveDemo": "https://careercraftt.vercel.app/",
       "github": "https://github.com/mauryajatin45/CareerCraft"
     }
   },
@@ -88,7 +88,7 @@
     }
   },
   {
-    "title": "Calculaotr",
+    "title": "Calculator",
     "image": "./images/Projects/calculator.png",
     "altText": "Calculator",
     "category": "React",
