@@ -44,7 +44,7 @@ app.use(
   createProxyMiddleware({
     target: 'https://lottery-game-tawny.vercel.app/',
     changeOrigin: true,
-        secure: true,
+    secure: true,
     pathRewrite: {
       '^/project/react/lotteryGame': '',
     },
@@ -56,7 +56,7 @@ app.use(
   createProxyMiddleware({
     target: 'https://jatin-calc.netlify.app/',
     changeOrigin: true,
-        secure: true,
+    secure: true,
     pathRewrite: {
       '^/project/react/Calculator': '',
     },
@@ -69,7 +69,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // serve index.html for any non-API, non-project path
 app.get(
-  /^(?!\/(?:api|project)).*$/, 
+  /^(?!\/(?:api|project)).*$/,
   (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
   }
