@@ -77,6 +77,17 @@
     }
   },
   {
+    "title": "CodeLab",
+    "image": "./images/Projects/CodeLab.png",
+    "altText": "CodeLab - Web Based code Editor Image",
+    "category": "React",
+    "description": "CodeLab is a web-based code editor platform that supports multiple programming languages with features such as syntax highlighting, auto-completion, code execution, complexity analysis, snippet saving, and Google Drive integration.",
+    "links": {
+      "liveDemo": "https://codelab.mauryajatin.me/",
+      "github": "https://github.com/mauryajatin45/CodeLab--Web-Based-Code-Editor"
+    }
+  },
+  {
     "title": "Lottery Game",
     "image": "./images/Projects/Lottery.png",
     "altText": "Lottery Game",
