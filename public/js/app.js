@@ -136,33 +136,33 @@
       })
       .catch((error) => console.error("Error fetching country codes:", error));
   };
-  
-/// Function to fetch projects data from a JSON file
-async function fetchProjects() {
-  try {
-    const response = await fetch('./project.json'); // Update the path to your JSON file
-    const projects = await response.json();
-    return projects;
-  } catch (error) {
-    console.error('Error fetching projects data:', error);
-    return [];
+
+  /// Function to fetch projects data from a JSON file
+  async function fetchProjects() {
+    try {
+      const response = await fetch('./project.json'); // Update the path to your JSON file
+      const projects = await response.json();
+      return projects;
+    } catch (error) {
+      console.error('Error fetching projects data:', error);
+      return [];
+    }
   }
-}
 
-// Function to render cards dynamically
-function renderCards(projects, category) {
-  const container = document.getElementById("cards-container");
-  container.innerHTML = ""; // Clear existing cards
+  // Function to render cards dynamically
+  function renderCards(projects, category) {
+    const container = document.getElementById("cards-container");
+    container.innerHTML = ""; // Clear existing cards
 
-  // Filter projects based on the category
-  const filteredProjects = projects.filter(project => project.category === category);
+    // Filter projects based on the category
+    const filteredProjects = projects.filter(project => project.category === category);
 
-  // Create and append cards
-  filteredProjects.forEach(project => {
-    const card = document.createElement("div");
-    card.className = `card BuildWith${project.category}`;
+    // Create and append cards
+    filteredProjects.forEach(project => {
+      const card = document.createElement("div");
+      card.className = `card BuildWith${project.category}`;
 
-    card.innerHTML = `
+      card.innerHTML = `
       <div class="card__corner"></div>
       <div class="card__img">
         <img loading="lazy" src="${project.image}" alt="${project.altText}" class="projectimg">
@@ -181,40 +181,40 @@ function renderCards(projects, category) {
         </div>
       </div>
     `;
-    container.appendChild(card);
-  });
-}
-
-// Function to highlight the active tab
-function highlightActiveTab(category) {
-  document.querySelectorAll(".sorterDiv > div").forEach(tab => {
-    if (tab.getAttribute("data-category") === category) {
-      tab.classList.add("active");
-    } else {
-      tab.classList.remove("active");
-    }
-  });
-}
-
-// Event listener for sorting
-function setupSortButtons(projects) {
-  document.querySelectorAll(".sorterDiv > div").forEach(sorter => {
-    sorter.addEventListener("click", () => {
-      const category = sorter.getAttribute("data-category");
-      renderCards(projects, category);
-      highlightActiveTab(category); // Highlight the active tab
+      container.appendChild(card);
     });
-  });
-}
+  }
 
-// Initialize the projects section
-async function initProjects() {
-  const projects = await fetchProjects(); // Fetch data from JSON file
-  const defaultCategory = "JavaScript"; // Default category
-  renderCards(projects, defaultCategory); // Initial render with default category
-  highlightActiveTab(defaultCategory); // Highlight the default active tab
-  setupSortButtons(projects); // Setup sorting functionality
-}
+  // Function to highlight the active tab
+  function highlightActiveTab(category) {
+    document.querySelectorAll(".sorterDiv > div").forEach(tab => {
+      if (tab.getAttribute("data-category") === category) {
+        tab.classList.add("active");
+      } else {
+        tab.classList.remove("active");
+      }
+    });
+  }
+
+  // Event listener for sorting
+  function setupSortButtons(projects) {
+    document.querySelectorAll(".sorterDiv > div").forEach(sorter => {
+      sorter.addEventListener("click", () => {
+        const category = sorter.getAttribute("data-category");
+        renderCards(projects, category);
+        highlightActiveTab(category); // Highlight the active tab
+      });
+    });
+  }
+
+  // Initialize the projects section
+  async function initProjects() {
+    const projects = await fetchProjects(); // Fetch data from JSON file
+    const defaultCategory = "JavaScript"; // Default category
+    renderCards(projects, defaultCategory); // Initial render with default category
+    highlightActiveTab(defaultCategory); // Highlight the default active tab
+    setupSortButtons(projects); // Setup sorting functionality
+  }
 
   // Initialization
   document.addEventListener("DOMContentLoaded", () => {
@@ -244,16 +244,22 @@ async function loadTopPosts() {
         <div class="blog-content">
           <h2 class="blog-title">${post.title}</h2>
           <p class="blog-excerpt">${post.excerpt}</p>
+          <a href="https://blog.mauryajatin.me/posts/${post.id}" class="btn2" target="_blank" 
+          style="margin: auto;
+          display: flex;
+          flex-direction: column;
+          width:fit-content;
+          ">
+          <span>Read More</span></a>
           </div>
           `;
-          container.appendChild(card);
-        });
-      } catch (err) {
-        console.error('Failed to load top posts:', err);
-      }
-    }
-    
-//<a href="https://blog.mauryajatin.me/posts/${post.id}" class="btn2" target="_blank"><span>Read More</span></a>
+      container.appendChild(card);
+    });
+  } catch (err) {
+    console.error('Failed to load top posts:', err);
+  }
+}
+
 
 
 // call it once DOM is loaded
