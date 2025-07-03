@@ -84,7 +84,7 @@
       </div>
       <div class="gallerydiv navclass li" id="">
         <a href="https://certification-gallery.netlify.app/" target="_blank">
-          <img src="/images/gallery.png" alt="Certification Gallery" width="30px">
+          <img loading="lazy" src="/images/gallery.png" alt="Certification Gallery" width="30px">
           <a href="https://certification-gallery.netlify.app/" target="_blank">
             <p>Certificates</p>
           </a>
@@ -423,13 +423,26 @@
   <script src="/js/app.js"></script>
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4FBHYLWN4H"></script>
-  <script defer>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-4FBHYLWN4H');
-  </script>
+  <script>
+  // Delay loading GTM by 3s after page load
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      const script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-4FBHYLWN4H";
+      script.async = true;
+      document.head.appendChild(script);
+
+      // Initialize GA only after script loads
+      script.onload = function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-4FBHYLWN4H');
+      };
+    }, 3000); // Delay of 3 seconds after full load
+  });
+</script>
+
 </body>
 
 </html>

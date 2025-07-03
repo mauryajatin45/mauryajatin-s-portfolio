@@ -1,9 +1,13 @@
 const express = require('express');
 const { createProxyMiddleware } = require('http-proxy-middleware');
+const compression = require('compression'); // ✅ Import compression
 const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+// ✅ Use compression before any middleware
+app.use(compression());
 
 // 1) Proxy for your TypingTest project
 app.use(
@@ -63,18 +67,13 @@ app.use(
   })
 );
 
-
-// after your static + proxy middleware:
+// Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-// serve index.html for any non-API, non-project path
-app.get(
-  /^(?!\/(?:api|project)).*$/,
-  (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-  }
-);
-
+// Serve index.html for non-API/project routes
+app.get(/^(?!\/(?:api|project)).*$/, (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
