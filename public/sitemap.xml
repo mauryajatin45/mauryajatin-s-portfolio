@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://mauryajatin.me/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://mauryajatin.me/projects</loc>
+    <loc>https://www.mauryajatin.me/#projects</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://mauryajatin.me/education</loc>
+    <loc>https://www.mauryajatin.me/#education</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  
   <url>
-    <loc>https://mauryajatin.me/certificates</loc>
+    <loc>https://www.mauryajatin.me/#hire</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <url>
+    <loc>https://certification-gallery.netlify.app/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  
+
 </urlset>
