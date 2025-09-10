@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <!-- Primary Meta Tags -->
-  <title>Jatin Maurya | Full Stack Web Developer | UI/UX Designer | Portfolio</title>
+  <title>Jatin Maurya | Full Stack Developer & Founder of Terzettoo (Infotech & IT Consulting)</title>
   <meta name="description"
-    content="Jatin Maurya - Full Stack Web Developer specializing in MERN stack. Expertise in JavaScript, React, Node.js and Python. View portfolio projects and contact for collaborations.">
+    content="Portfolio of Jatin Maurya — Full Stack Developer (MERN) & Founder of Terzettoo, an Infotech & IT Consulting studio. Projects in React, Next.js, Node.js, Express.js, MongoDB, UI/UX, and cloud/DevOps. Open for collaborations." />
+  <meta name="robots" content="index, follow" />
 
   <!-- SEO Keywords (not used by most search engines but some tools still consider) -->
   <meta name="keywords"
-    content="Jatin, Jatin Maurya, Web Developer Portfolio, Full Stack Developer, MERN Stack, React Developer, Node.js Developer, UI/UX Designer, JavaScript Expert">
+    content="Jatin Maurya, Terzettoo, Founder, Infotech, IT Consulting, Full Stack Developer, MERN, React, Next.js, Node.js, Express.js, MongoDB, UI/UX, Portfolio" />
 
   <!-- Improved Viewport Settings -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
@@ -55,13 +56,51 @@
     "name": "Jatin Maurya",
     "jobTitle": "Full Stack Web Developer",
     "url": "https://mauryajatin.me/",
+    "image": "https://mauryajatin.me/images/og-image.jpg",
     "sameAs": [
-      "https://linkedin.com/in/jatin-maurya",
+      "https://www.linkedin.com/in/jatin-maurya",
       "https://github.com/jatin-maurya",
-      "https://twitter.com/jatin-maurya"
+      "https://x.com/mauryajatin45"
     ],
-    "skills": "JavaScript, React, Node.js, Python, MongoDB, UI/UX Design",
-    "description": "Professional Full Stack Web Developer with expertise in modern web technologies and user-centered design."
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Terzettoo",
+      "url": "https://www.terzettoo.com/"
+    },
+    "skills": ["JavaScript", "React", "Next.js", "Node.js", "Express.js", "MongoDB", "UI/UX Design"],
+    "description": "Full Stack Web Developer with expertise in modern web technologies and user-centered design."
+  }
+  </script>
+
+  <!-- Structured Data: Organization (Terzettoo) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Terzettoo",
+    "url": "https://www.terzettoo.com/",
+    "logo": "https://www.terzettoo.com/logo.png",
+    "foundingDate": "2025",
+    "founder": {
+      "@type": "Person",
+      "name": "Jatin Maurya"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ahmedabad",
+      "addressRegion": "Gujarat",
+      "addressCountry": "IN"
+    },
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "Customer support",
+      "email": "admin@terzettoo.com",
+      "telephone": "+91-7069013316"
+    }],
+    "sameAs": [
+      "https://www.goodfirms.co/company/terzettoo",
+      "https://clutch.co/profile/terzettoo"
+    ]
   }
   </script>
 </head>
@@ -283,11 +322,32 @@
 
         <div class="work1 container-fade-in">
           <h2 class="workh2">
+            Terzettoo
+            <img loading="lazy" src="./images/Terzettoo_logo_remove_BG.png" alt="Terzettoo_logo"
+              style="margin-right: 10%;" />
+          </h2>
+          <h4 class="workh4">Founder</h4>
+          <h4 class="workh4">25/9/2025 - Present</h4>
+          <p class="workp">
+            I founded Terzettoo, an Infotech & IT consulting studio based in Ahmedabad, focused on building
+            performance-driven digital products. We design and develop custom web and mobile apps, architect secure
+            APIs,
+            deliver UI/UX design, and provide cloud/DevOps, QA, and technology advisory. We also support SEO and
+            go-to-market
+            enablement for select clients. I lead product strategy, technical architecture (MERN/Node.js), hiring, and
+            delivery,
+            ensuring each engagement ships scalable, secure, and business-aligned software from MVP to enterprise
+            roll-out.
+          </p>
+        </div>
+
+        <div class="work1 container-fade-in">
+          <h2 class="workh2">
             Shiv Aurica
             <img loading="lazy" src="./images/shivaurica.png" alt="shiv_aurica_logo" style="margin-right: 10%;" />
           </h2>
           <h4 class="workh4">Full Stack Developer</h4>
-          <h4 class="workh4">9/6/2025 - Present</h4>
+          <h4 class="workh4">9/6/2025 - 9/9/2025</h4>
           <p class="workp">
             As a Full Stack Developer, I was responsible for designing, developing, and maintaining end-to-end web
             applications, ensuring smooth integration between front-end and back-end systems. I worked extensively with
@@ -424,24 +484,24 @@
 
   <!-- Google Analytics -->
   <script>
-  // Delay loading GTM by 3s after page load
-  window.addEventListener('load', function () {
-    setTimeout(function () {
-      const script = document.createElement('script');
-      script.src = "https://www.googletagmanager.com/gtag/js?id=G-4FBHYLWN4H";
-      script.async = true;
-      document.head.appendChild(script);
+    // Delay loading GTM by 3s after page load
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        const script = document.createElement('script');
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-4FBHYLWN4H";
+        script.async = true;
+        document.head.appendChild(script);
 
-      // Initialize GA only after script loads
-      script.onload = function () {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-4FBHYLWN4H');
-      };
-    }, 3000); // Delay of 3 seconds after full load
-  });
-</script>
+        // Initialize GA only after script loads
+        script.onload = function () {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'G-4FBHYLWN4H');
+        };
+      }, 3000); // Delay of 3 seconds after full load
+    });
+  </script>
 
 </body>
 
