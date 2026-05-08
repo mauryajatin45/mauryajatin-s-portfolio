@@ -69,6 +69,10 @@ app.use(
 
 // Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
+// Serve Zoho domain verification file explicitly
+app.get('/zoho-domain-verification.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'zoho-domain-verification.html'));
+});
 
 // Serve index.html for non-API/project routes
 app.get(/^(?!\/(?:api|project)).*$/, (req, res) => {
